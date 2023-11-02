@@ -6,8 +6,6 @@ import ClientOnly from "../../ClientOnly";
 const StudentList = async () => {
   const students = await getStudents();
 
-  console.log("students::", students);
-
   if (!students.length) {
     return (
       <ClientOnly>
@@ -19,7 +17,9 @@ const StudentList = async () => {
   return (
     <div className="row">
       {students?.map((student) => (
-        <StudentCard key={student.id} student={student} />
+        <ClientOnly key={student.id}>
+          <StudentCard student={student} />
+        </ClientOnly>
       ))}
     </div>
   );
