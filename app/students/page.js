@@ -4,6 +4,7 @@ import Layout from "@/src/layout/Layout";
 
 import StudentSearch from "@/src/components/students/list/studentSearch";
 import StudentList from "@/src/components/students/list/studentList";
+import ClientOnly from "@/src/components/ClientOnly";
 
 const CourseGrid = () => {
   return (
@@ -107,7 +108,9 @@ const CourseGrid = () => {
                     </select>
                   </div>
                 </div>
-                <StudentList />
+                <ClientOnly>
+                  <StudentList />
+                </ClientOnly>
                 <ul className="pagination flex-wrap mt-20">
                   <Pagination
                     paginationCls={".course-grids .row .col-md-6"}

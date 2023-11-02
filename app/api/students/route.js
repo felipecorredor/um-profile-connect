@@ -17,7 +17,7 @@ export async function POST(request) {
 
   const user = await prisma.student.create({
     data: {
-      userId: "652dbc36f246ea39ea7d5b34",
+      userId: "652dbc36f246ead4ea7d5b54",
       description,
       educations,
       email,
