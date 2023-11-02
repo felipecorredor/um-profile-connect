@@ -8,7 +8,7 @@ const StudentListPage = async () => {
       <ul>
         {students?.map((student) => (
           <li key={student.id}>
-            <p>{student.firstName}</p>
+            <p>{student.id}</p>
             <p>{student.lastName}</p>
           </li>
         ))}
