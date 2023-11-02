@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import BasicForm from "../basic";
@@ -32,7 +34,7 @@ const CreateStudent = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("/api/students/create", data)
+      .post("/api/students", data)
       .then(async () => {
         toast.success("Perfil creado exitosamente");
       })
@@ -42,8 +44,6 @@ const CreateStudent = () => {
   };
 
   const watchImageSrc = methods.watch("profilePictureUrl");
-
-  console.log("watchImageSrc::", watchImageSrc);
 
   return (
     <FormProvider {...methods}>

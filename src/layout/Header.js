@@ -200,7 +200,7 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
         <Link href="/">Home</Link>
       </li>
       <li>
-        <Link href="/about">Acerca de</Link>
+        <Link href="/about">Acerca</Link>
       </li>
       <li>
         <Link href="/faqs">Faqs</Link>
@@ -209,7 +209,7 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
         <Link href="/students">Estudiantes</Link>
       </li>
       <li>
-        <Link href="/create-profile">Crear perfil</Link>
+        <Link href="/curriculum">Crear perfil</Link>
       </li>
     </ul>
   ),

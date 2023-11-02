@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ClientOnly from "@/src/components/ClientOnly";
+import ToasterProvider from "./providers/ToasterProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +38,12 @@ export default function RootLayout({ children }) {
         {/*====== Main Style ======*/}
         <link rel="stylesheet" href="assets/css/style.css" />
       </head>
-      <body>{children}</body>
+      <body>
+        <ClientOnly>
+          <ToasterProvider />
+        </ClientOnly>
+        {children}
+      </body>
     </html>
   );
 }
