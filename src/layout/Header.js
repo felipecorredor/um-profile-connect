@@ -203,10 +203,10 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
         <Link href="/about">Acerca de</Link>
       </li>
       <li>
-        <Link href="/students">Estudiantes</Link>
+        <Link href="/faqs">Faqs</Link>
       </li>
       <li>
-        <Link href="/faqs">Faqs</Link>
+        <Link href="/students">Estudiantes</Link>
       </li>
       <li>
         <Link href="/create-profile">Crear perfil</Link>

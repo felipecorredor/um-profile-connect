@@ -90,12 +90,12 @@ const Index1Isotope = () => {
             Photography
           </li>
         </ul>
-        {/* <div className="row coach-active justify-content-center">
+        <div className="row coach-active justify-content-center">
           <div className="col-lg-4 col-md-6 item marketing technology">
             <div className="coach-item wow fadeInUp delay-0-2s">
               <div className="coach-image">
-                <Link href="/course-grid">
-                  <a className="category">Lifestyle</a>
+                <Link className="category" href="/course-grid">
+                  Lifestyle
                 </Link>
                 <img src="assets/images/coachs/coach1.jpg" alt="Coach" />
               </div>
@@ -133,8 +133,8 @@ const Index1Isotope = () => {
           <div className="col-lg-4 col-md-6 item design photography">
             <div className="coach-item wow fadeInUp delay-0-4s">
               <div className="coach-image">
-                <Link href="/course-grid">
-                  <a className="category">Web Design</a>
+                <Link className="category" href="/course-grid">
+                  Web Design
                 </Link>
                 <img src="assets/images/coachs/coach2.jpg" alt="Coach" />
               </div>
@@ -172,8 +172,8 @@ const Index1Isotope = () => {
           <div className="col-lg-4 col-md-6 item development photography">
             <div className="coach-item wow fadeInUp delay-0-6s">
               <div className="coach-image">
-                <Link href="/course-grid">
-                  <a className="category">Development</a>
+                <Link className="category" href="/course-grid">
+                  Development
                 </Link>
                 <img src="assets/images/coachs/coach3.jpg" alt="Coach" />
               </div>
@@ -211,8 +211,8 @@ const Index1Isotope = () => {
           <div className="col-lg-4 col-md-6 item design technology">
             <div className="coach-item wow fadeInUp delay-0-2s">
               <div className="coach-image">
-                <Link href="/course-grid">
-                  <a className="category">Technology</a>
+                <Link className="category" href="/course-grid">
+                  Technology
                 </Link>
                 <img src="assets/images/coachs/coach4.jpg" alt="Coach" />
               </div>
@@ -250,8 +250,8 @@ const Index1Isotope = () => {
           <div className="col-lg-4 col-md-6 item development photography">
             <div className="coach-item wow fadeInUp delay-0-4s">
               <div className="coach-image">
-                <Link href="/course-grid">
-                  <a className="category">Photography</a>
+                <Link className="category" href="/course-grid">
+                  Photography
                 </Link>
                 <img src="assets/images/coachs/coach5.jpg" alt="Coach" />
               </div>
@@ -289,8 +289,8 @@ const Index1Isotope = () => {
           <div className="col-lg-4 col-md-6 item design technology">
             <div className="coach-item wow fadeInUp delay-0-6s">
               <div className="coach-image">
-                <Link href="/course-grid">
-                  <a className="category">Marketing</a>
+                <Link className="category" href="/course-grid">
+                  Marketing
                 </Link>
                 <img src="assets/images/coachs/coach6.jpg" alt="Coach" />
               </div>
@@ -325,7 +325,7 @@ const Index1Isotope = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );

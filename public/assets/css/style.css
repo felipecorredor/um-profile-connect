@@ -10823,6 +10823,7 @@ blockquote .blockquote-footer:before {
   border-radius: 0;
   padding: 11px 40px;
   background: transparent;
+  
   color: #204ecf;
   display: -webkit-box;
   display: -ms-flexbox;
