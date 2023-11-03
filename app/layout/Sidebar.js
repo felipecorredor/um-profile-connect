@@ -1,5 +1,6 @@
+import { sidebarOnclick } from "@/sources/utils";
 import { Fragment } from "react";
-import { sidebarOnclick } from "../utils";
+
 const Sidebar = () => {
   return (
     <Fragment>

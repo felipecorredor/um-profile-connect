@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import dynamic from "next/dynamic";
-import Layout from "@/sources/layout/Layout";
-import Index1WorkStepSlider from "@/app/components/slider/Index1WorkStepSlider";
+
+import Layout from "./layout/Layout";
+import Index1WorkStepSlider from "./components/slider/Index1WorkStepSlider";
 
 const Index1Isotope = dynamic(
   () => import("@/app/components/isotope/Index1Isotope"),

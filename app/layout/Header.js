@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import MobileHeader from "./MobileHeader";
-import { stickyNav } from "../utils";
+import { stickyNav } from "@/sources/utils";
 
 const Header = ({ header }) => {
   useEffect(() => {

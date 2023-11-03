@@ -3,10 +3,10 @@
 import { Fragment, useEffect, useState } from "react";
 import niceSelect from "react-nice-select";
 
-import { animation } from "../utils";
 import Footer from "./Footer";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import { animation } from "@/sources/utils";
 
 const Layout = ({ children, header, footer }) => {
   useEffect(() => {
