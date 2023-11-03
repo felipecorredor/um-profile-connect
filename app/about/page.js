@@ -1,6 +1,6 @@
-import Advertise from "@/src/components/Advertise";
-import PageBanner from "@/src/components/PageBanner";
-import Layout from "@/src/layout/Layout";
+import Advertise from "@/sources/components/Advertise";
+import PageBanner from "@/sources/components/PageBanner";
+import Layout from "@/sources/layout/Layout";
 import Link from "next/link";
 
 const About = () => {

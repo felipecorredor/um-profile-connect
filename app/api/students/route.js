@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import prisma from "@/app/libs/prismadb";
+import { generateRandomString } from "@/sources/utils";
 
 export async function POST(request) {
   const body = await request.json();
@@ -17,7 +18,7 @@ export async function POST(request) {
 
   const user = await prisma.student.create({
     data: {
-      userId: "652dbc36f242e2d4ea7d5b54",
+      userId: generateRandomString(),
       description,
       educations,
       email,

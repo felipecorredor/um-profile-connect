@@ -75,3 +75,17 @@ export const pagination = (listClass, sort, active) => {
 
 // fetcher
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
+// generateRandomString
+export const generateRandomString = () => {
+  const LENGTH_STRING = 24;
+  const ALLOWED_CHARACTERS = "0123456789abcdef";
+
+  let randomString = "";
+  for (let i = 0; i < LENGTH_STRING; i++) {
+    const randomCharacter =
+      ALLOWED_CHARACTERS[Math.floor(Math.random() * ALLOWED_CHARACTERS.length)];
+    randomString += randomCharacter;
+  }
+  return randomString;
+};

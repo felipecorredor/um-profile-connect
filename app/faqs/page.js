@@ -2,9 +2,9 @@
 
 import { Accordion, Nav, Tab } from "react-bootstrap";
 
-import FaqCard from "@/src/components/faqs/faqCard";
-import PageBanner from "@/src/components/PageBanner";
-import Layout from "@/src/layout/Layout";
+import FaqCard from "@/sources/components/faqs/faqCard";
+import PageBanner from "@/sources/components/PageBanner";
+import Layout from "@/sources/layout/Layout";
 
 const FaqCards = () => {
   return (

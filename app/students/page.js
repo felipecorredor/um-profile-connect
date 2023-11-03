@@ -1,10 +1,10 @@
-import Pagination from "@/src/Pagination";
-import PageBanner from "@/src/components/PageBanner";
-import Layout from "@/src/layout/Layout";
+import Pagination from "@/sources/Pagination";
+import PageBanner from "@/sources/components/PageBanner";
+import Layout from "@/sources/layout/Layout";
 
-import StudentSearch from "@/src/components/students/list/studentSearch";
-import StudentList from "@/src/components/students/list/studentList";
-import ClientOnly from "@/src/components/ClientOnly";
+import StudentSearch from "@/sources/components/students/list/studentSearch";
+import StudentList from "@/sources/components/students/list/studentList";
+import ClientOnly from "@/sources/components/ClientOnly";
 import getStudents from "../actions/getStudents";
 
 const StudentListPage = async () => {

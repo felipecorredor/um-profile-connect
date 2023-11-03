@@ -1,6 +1,6 @@
-import PageBanner from "@/src/components/PageBanner";
-import CreateStudent from "@/src/components/students/create";
-import Layout from "@/src/layout/Layout";
+import PageBanner from "@/sources/components/PageBanner";
+import CreateStudent from "@/sources/components/students/create";
+import Layout from "@/sources/layout/Layout";
 import Link from "next/link";
 
 const CourseDetails = () => {
