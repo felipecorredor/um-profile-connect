@@ -1,5 +1,5 @@
-import PageBanner from "@/sources/components/PageBanner";
-import CreateStudent from "@/sources/components/students/create";
+import PageBanner from "@/app/components/PageBanner";
+import CreateStudent from "@/app/components/students/create";
 import Layout from "@/sources/layout/Layout";
 import Link from "next/link";
 

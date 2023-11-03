@@ -2,8 +2,8 @@
 
 import { Accordion, Nav, Tab } from "react-bootstrap";
 
-import FaqCard from "@/sources/components/faqs/faqCard";
-import PageBanner from "@/sources/components/PageBanner";
+import FaqCard from "@/app/components/faqs/faqCard";
+import PageBanner from "@/app/components/PageBanner";
 import Layout from "@/sources/layout/Layout";
 
 const FaqCards = () => {

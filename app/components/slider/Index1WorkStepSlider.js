@@ -2,7 +2,7 @@
 
 import React, { Component, Fragment } from "react";
 import Slider from "react-slick";
-import { Index1WorkStepSliderprops } from "../../sliderProps";
+import { Index1WorkStepSliderprops } from "../../../sources/sliderProps";
 
 export default class Index1WorkStepSlider extends Component {
   constructor(props) {

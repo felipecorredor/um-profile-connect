@@ -1,5 +1,5 @@
-import Advertise from "@/sources/components/Advertise";
-import PageBanner from "@/sources/components/PageBanner";
+import Advertise from "@/app/components/Advertise";
+import PageBanner from "@/app/components/PageBanner";
 import Layout from "@/sources/layout/Layout";
 import Link from "next/link";
 
