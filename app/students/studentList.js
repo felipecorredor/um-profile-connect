@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import StudentCard from "./studentCard";
+import StudentCard from "../components/students/list/studentCard";
 import { Button } from "react-bootstrap";
 
 const StudentList = ({ students }) => {

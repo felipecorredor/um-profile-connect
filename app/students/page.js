@@ -1,10 +1,11 @@
 import StudentSearch from "@/app/components/students/list/studentSearch";
-import StudentList from "@/app/components/students/list/studentList";
+
 import ClientOnly from "@/app/components/ClientOnly";
 import getStudents from "../actions/getStudents";
 import Layout from "../layout/Layout";
 import PageBanner from "../components/PageBanner";
 import Pagination from "@/sources/Pagination";
+import StudentList from "./studentList";
 
 const StudentListPage = async () => {
   const students = await getStudents();
