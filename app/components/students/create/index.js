@@ -81,7 +81,7 @@ const CreateStudent = () => {
       .then(async () => {
         toast.success("Perfil creado exitosamente");
         revalidateTag("students");
-        redirect(`students`);
+        redirect(`/students`);
       })
       .catch((error) => {
         toast.error(error.message);
