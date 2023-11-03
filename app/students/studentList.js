@@ -4,6 +4,8 @@ import React from "react";
 import StudentCard from "../components/students/list/studentCard";
 
 const StudentList = ({ students }) => {
+  console.log("students::", students);
+
   return (
     <div className="row">
       {students.map((student) => (
