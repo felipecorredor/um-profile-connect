@@ -7,7 +7,7 @@ import PageBanner from "../components/PageBanner";
 import Pagination from "@/sources/Pagination";
 import StudentList from "./studentList";
 
-export const revalidate = 0;
+// export const revalidate = 0;
 
 const StudentListPage = async () => {
   const students = await getStudents();
