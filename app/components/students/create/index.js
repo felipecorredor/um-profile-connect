@@ -10,8 +10,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import EducationForm from "../education";
 import ImageUpload from "../../inputs/image-upload";
-import { revalidatePath, revalidateTag } from "next/cache";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const DEFAULT_VALUES = {
   firstName: "John",
@@ -67,6 +66,8 @@ const CreateStudent = () => {
     defaultValues: DEFAULT_VALUES,
   });
 
+  const router = useRouter();
+
   const setCustomValue = (id, value) => {
     methods.setValue(id, value, {
       shouldDirty: true,
@@ -80,8 +81,7 @@ const CreateStudent = () => {
       .post("/api/students", data)
       .then(async () => {
         toast.success("Perfil creado exitosamente");
-        revalidateTag("students");
-        redirect(`/students`);
+        router.push("/students");
       })
       .catch((error) => {
         toast.error(error.message);

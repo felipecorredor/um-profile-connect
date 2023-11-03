@@ -16,7 +16,7 @@ export async function POST(request) {
     skills,
   } = body;
 
-  const user = await prisma.student.create({
+  const student = await prisma.student.create({
     data: {
       userId: generateRandomString(),
       description,
@@ -30,5 +30,11 @@ export async function POST(request) {
     },
   });
 
-  return NextResponse.json({ user });
+  return NextResponse.json({ student });
+}
+
+export async function GET() {
+  const students = await prisma.student.findMany();
+
+  return NextResponse.json({ students });
 }
