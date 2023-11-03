@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
         <ClientOnly>
           <ToasterProvider />
         </ClientOnly>
-        {children}
+        <ClientOnly>{children}</ClientOnly>
       </body>
     </html>
   );
