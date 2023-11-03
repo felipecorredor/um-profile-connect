@@ -5,8 +5,19 @@ import Layout from "@/src/layout/Layout";
 import StudentSearch from "@/src/components/students/list/studentSearch";
 import StudentList from "@/src/components/students/list/studentList";
 import ClientOnly from "@/src/components/ClientOnly";
+import getStudents from "../actions/getStudents";
 
-const CourseGrid = () => {
+const StudentListPage = async () => {
+  const students = await getStudents();
+
+  if (students.length === 0) {
+    return (
+      <ClientOnly>
+        <p>No hay estudiantes</p>
+      </ClientOnly>
+    );
+  }
+
   return (
     <Layout>
       <PageBanner pageName={"Students"} />
@@ -109,7 +120,7 @@ const CourseGrid = () => {
                   </div>
                 </div>
                 <ClientOnly>
-                  <StudentList />
+                  <StudentList students={students} />
                 </ClientOnly>
                 <ul className="pagination flex-wrap mt-20">
                   <Pagination
@@ -125,4 +136,4 @@ const CourseGrid = () => {
     </Layout>
   );
 };
-export default CourseGrid;
+export default StudentListPage;
