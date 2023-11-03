@@ -1,22 +1,13 @@
 import StudentSearch from "@/app/components/students/list/studentSearch";
 
 import ClientOnly from "@/app/components/ClientOnly";
-// import getStudents from "../actions/getStudents";
+import getStudents from "../actions/getStudents";
 import Layout from "../layout/Layout";
 import PageBanner from "../components/PageBanner";
 import Pagination from "@/sources/Pagination";
 import StudentList from "./studentList";
-import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
-
-async function getStudents() {
-  const res = await prisma.student.findMany();
-
-  console.log("res:::", res);
-
-  return res;
-}
+export const revalidate = 1;
 
 const StudentListPage = async () => {
   const students = await getStudents();
