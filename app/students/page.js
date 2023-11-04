@@ -1,22 +1,16 @@
 import StudentSearch from "@/app/components/students/list/studentSearch";
 
-import ClientOnly from "@/app/components/ClientOnly";
-// import getStudents from "../actions/getStudents";
 import Layout from "../layout/Layout";
 import PageBanner from "../components/PageBanner";
 import Pagination from "@/sources/Pagination";
 import StudentList from "./studentList";
-import { fetcher } from "@/sources/utils";
-import useSWR from "swr";
+import { Suspense } from "react";
+import Loading from "../loading";
 
 const StudentListPage = async () => {
-  // const students = await getStudents();
-
   return (
     <Layout>
       <PageBanner pageName={"Students"} />
-      {/* Page Banner End */}
-      {/* Course Left Start */}
       <section className="course-left-area py-130 rpy-100">
         <div className="container">
           <div className="row large-gap">
@@ -113,8 +107,9 @@ const StudentListPage = async () => {
                     </select>
                   </div>
                 </div>
-
-                <StudentList />
+                <Suspense fallback={<Loading />}>
+                  <StudentList />
+                </Suspense>
                 <ul className="pagination flex-wrap mt-20">
                   <Pagination
                     paginationCls={".course-grids .row .col-md-6"}

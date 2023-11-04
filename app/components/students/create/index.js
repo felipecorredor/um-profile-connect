@@ -46,7 +46,7 @@ const DEFAULT_VALUES = {
       position: "Software Engineer",
       company: "Tech Innovators Inc.",
       location: "San Francisco, CA",
-      typeEmployment: "Full-time",
+      typeEmployment: "full-time",
       description:
         "Seeking a challenging role as a Software Engineer at Tech Innovators Inc. to work on cutting-edge projects and contribute to the development of innovative software solutions.",
     },
@@ -54,7 +54,7 @@ const DEFAULT_VALUES = {
       position: "Marketing Manager",
       company: "Global Marketing Agency",
       location: "New York, NY",
-      typeEmployment: "Contract",
+      typeEmployment: "autonomous",
       description:
         "Looking for a Marketing Manager position at Global Marketing Agency. Excited to lead marketing campaigns and drive growth for clients while leveraging my strategic and creative skills.",
     },

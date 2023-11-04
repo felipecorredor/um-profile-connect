@@ -2,9 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const StudentCard = ({ student }) => {
+  const router = useRouter();
+
   return (
     <div className="col-md-6">
       <div className="coach-item wow fadeInUp delay-0-4s">
@@ -17,7 +19,12 @@ const StudentCard = ({ student }) => {
         <div className="coach-content">
           <span className="label">Basic Coach</span>
           <h4>
-            <Link href={`/${encodeURIComponent(student.id)}`}>
+            <Link
+              href={{
+                pathname: "/student",
+                query: { studentId: student.id },
+              }}
+            >
               Learn How to Manage Your Lifestyle
             </Link>
           </h4>

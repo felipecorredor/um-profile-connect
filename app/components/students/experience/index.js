@@ -51,11 +51,11 @@ const ExperienceForm = () => {
           </Form.Group>
 
           <div className="form-group col-md-6">
-            <select
-              name="subject"
+            <FormControl
               {...register(`experiences.${index}.typeEmployment`)}
-              className="form-control"
+              as="select"
               style={{ fontFamily: "unset" }}
+              defaultValue=""
             >
               <option selected disabled>
                 Tipo de empleo
@@ -65,7 +65,7 @@ const ExperienceForm = () => {
               <option value="autonomous">Autónomo</option>
               <option value="temporary-contract">Contrato temporal</option>
               <option value="practice-contract">Contrato de practica</option>
-            </select>
+            </FormControl>
           </div>
 
           <Form.Group as={InputGroup} className="col-md-12">
