@@ -18,12 +18,12 @@ const StudentPage = ({ searchParams }) => {
     setActive(value === active ? "" : value);
   };
 
-  const studentId = searchParams?.studentId;
+  const studentId = searchParams.studentId;
 
   console.log("studentId::", studentId);
 
   const { data, error, isLoading } = useSWR(
-    `/api/students/${studentId}`,
+    studentId ? `/api/students/${studentId}` : null,
     fetcher
   );
 
