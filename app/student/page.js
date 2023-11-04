@@ -18,7 +18,7 @@ const StudentPage = ({ searchParams }) => {
     setActive(value === active ? "" : value);
   };
 
-  const { studentId } = searchParams;
+  const { studentId = "" } = searchParams;
 
   const { data, error, isLoading } = useSWR(
     `/api/students/${studentId}`,
