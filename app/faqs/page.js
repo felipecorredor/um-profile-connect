@@ -24,7 +24,7 @@ const FaqCards = () => {
                 </Nav.Link>
               </li>
             </Nav>
-            <Tab.Content className="tab-content FaqCard-accordion">
+            <Tab.Content className="tab-content faq-accordion">
               <Tab.Pane className="tab-pane fade" eventKey="tabContent1">
                 <Accordion defaultActiveKey="a1">
                   <FaqCard />
