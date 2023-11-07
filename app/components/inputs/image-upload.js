@@ -6,7 +6,6 @@ import { CldUploadWidget } from "next-cloudinary";
 const ImageUpload = ({ onChange, value }) => {
   const handleUpload = useCallback(
     (result) => {
-      console.log("result:::", result);
       onChange(result.info.secure_url);
     },
     [onChange]
@@ -24,7 +23,17 @@ const ImageUpload = ({ onChange, value }) => {
         return (
           <div onClick={() => open?.()}>
             <span className="icon-plus" />
-            <div>Click para subir la imagen de perfil</div>
+            {!value && (
+              <div className="upload-profile">
+                <ul className="author-date-enroll">
+                  <li>
+                    <i className="fas fa-cloud-upload-alt" />
+                    Click para subir la imagen de perfil
+                  </li>
+                </ul>
+              </div>
+            )}
+
             {value && (
               <div className="image">
                 <img

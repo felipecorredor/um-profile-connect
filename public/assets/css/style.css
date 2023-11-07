@@ -7175,6 +7175,15 @@ h6,
   box-shadow: 10px 0 60px rgba(0, 204, 131, 0.1);
 }
 
+.upload-profile {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: dotted;
+  cursor: pointer;
+}
+
 /*******************************************************/
 /**************** 12. Work Step Section ****************/
 /*******************************************************/
@@ -10823,7 +10832,7 @@ blockquote .blockquote-footer:before {
   border-radius: 0;
   padding: 11px 40px;
   background: transparent;
-  
+
   color: #204ecf;
   display: -webkit-box;
   display: -ms-flexbox;

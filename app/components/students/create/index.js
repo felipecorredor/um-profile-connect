@@ -16,7 +16,7 @@ const DEFAULT_VALUES = {
   firstName: "John",
   lastName: "Doe",
   email: "johndoe@example.com",
-  dateOfBirth: "1990-05-15",
+  dateOfBirth: new Date().toLocaleString() + "",
   phoneNumber: "+1 (555) 123-4567",
   description:
     "I am a dedicated professional with a strong background in software development. I have a passion for creating innovative solutions and thrive in collaborative team environments. My goal is to continue honing my skills and contributing to exciting projects in the tech industry.",
@@ -81,7 +81,7 @@ const CreateStudent = () => {
       .post("/api/students", data)
       .then(async () => {
         toast.success("Perfil creado exitosamente");
-        router.push("/students");
+        router.refresh();
       })
       .catch((error) => {
         toast.error(error.message);

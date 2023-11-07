@@ -1,9 +1,6 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import ClientOnly from "@/app/components/ClientOnly";
 import ToasterProvider from "./providers/ToasterProvider";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",

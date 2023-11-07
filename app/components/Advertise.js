@@ -1,6 +1,5 @@
-import Link from "next/link";
 import advertise1 from "/public/assets/images/advertise/1.png";
-import advertise2 from "/public/assets/images/advertise/2.png";
+
 const Advertise = () => {
   return (
     <div className="row justify-content-center">
@@ -9,7 +8,8 @@ const Advertise = () => {
           <div className="content">
             <h4>Encuentra Tu Futuro Profesional</h4>
             <p>
-            En la Universidad Manizales, creemos en tu potencial.Regístrate hoy y comienza tu viaje hacia una carrera exitosa. 
+              En la Universidad Manizales, creemos en tu potencial.Regístrate
+              hoy y comienza tu viaje hacia una carrera exitosa.
             </p>
           </div>
           <div className="image">

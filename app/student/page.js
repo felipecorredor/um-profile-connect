@@ -13,8 +13,6 @@ const StudentPage = () => {
 
   const studentId = searchParams.get("studentId");
 
-  console.log("studentId::", studentId);
-
   const { data, error, isLoading } = useSWR(
     `/api/students/${studentId}`,
     fetcher
