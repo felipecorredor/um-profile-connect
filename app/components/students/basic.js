@@ -1,13 +1,15 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import InputText from "../inputs/input-text";
-import InputDate from "../inputs/input-date";
 import { Form } from "react-bootstrap";
 
 const BasicForm = () => {
   const methods = useFormContext();
 
-  const { register } = methods;
+  const {
+    register,
+    formState: { errors },
+  } = methods;
 
   return (
     <Form.Row>
@@ -36,20 +38,25 @@ const BasicForm = () => {
           register={register}
         />
       </div>
+
       <div className="col-sm-6">
-        <InputDate
-          name="dateOfBirth"
+        <InputText
+          name="position"
           icon="fas fa-email"
-          placeholder="Fecha de nacimiento"
+          placeholder="Rol: ej. Frontend, Backend ..."
           register={register}
         />
       </div>
       <div className="col-sm-6">
         <InputText
-          name="phoneNumber"
+          type="number"
+          min={0}
+          max={10}
+          name="semester"
           icon="fas fa-email"
-          placeholder="Numero celular"
+          placeholder="Semestre"
           register={register}
+          errors={errors}
         />
       </div>
 

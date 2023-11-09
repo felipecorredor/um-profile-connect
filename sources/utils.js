@@ -89,3 +89,7 @@ export const generateRandomString = () => {
   }
   return randomString;
 };
+
+export const isNotEmptyObject = (obj) => {
+  return Object.values(obj).length > 0;
+};

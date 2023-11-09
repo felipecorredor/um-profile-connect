@@ -11,12 +11,20 @@ const StudentList = () => {
 
   const students = data?.students || [];
 
-  if (students.length === 0) {
+  if (students.length === 0 && !isLoading) {
     return (
       <ClientOnly>
         <p>No hay estudiantes</p>
       </ClientOnly>
     );
+  }
+
+  if (error && !isLoading) {
+    return <div>Error...</div>;
+  }
+
+  if (isLoading) {
+    return <div className="preloading" />;
   }
 
   return (
