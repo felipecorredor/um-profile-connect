@@ -8,27 +8,23 @@ const Footer = ({ footer }) => {
   switch (footer) {
     case 1:
       return <Footer1 scrollTop={scrollTop} />;
-    case 3:
-      return <Footer3 scrollTop={scrollTop} />;
-    case 4:
-      return <Footer4 scrollTop={scrollTop} />;
     default:
-      return <DefaultFooter scrollTop={scrollTop} />;
+      return <Footer1 scrollTop={scrollTop} />;
   }
 };
 export default Footer;
 const FollowIcon = () => (
     <Fragment>
-      <Link href="/contact">
+      <Link target="_blank" href="https://www.facebook.com/umanizales/">
         <i className="fab fa-facebook-f" />
       </Link>
-      <Link href="/contact">
+      <Link target="_blank" href="https://twitter.com/#!/umanizales">
         <i className="fab fa-twitter" />
       </Link>
-      <Link href="/contact">
+      <Link target="_blank" href="https://www.linkedin.com/school/universidad-de-manizales/?originalSubdomain=co">
         <i className="fab fa-linkedin-in" />
       </Link>
-      <Link href="/contact">
+      <Link target="_blank" href="https://www.youtube.com/channel/UCBvdS_1CLDH4Jt5dTIEYKOg/videos">
         <i className="fab fa-youtube" />
       </Link>
     </Fragment>
@@ -36,44 +32,44 @@ const FollowIcon = () => (
   Courses = () => (
     <Fragment>
       <li>
-        <Link href="/course-details">Life Coach</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/oferta-academica?field_program_type_target_id=60">Pregrados</Link>
       </li>
       <li>
-        <Link href="/course-details">Business Coach</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/oferta-academica?combine=&field_program_type_target_id=61&field_faculty_target_id_entityreference_filter=All">Especializaciones</Link>
       </li>
       <li>
-        <Link href="/course-details">Health Coach</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/oferta-academica?combine=&field_program_type_target_id=58&field_faculty_target_id_entityreference_filter=All">Maestrías</Link>
       </li>
       <li>
-        <Link href="/course-details">Development</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/oferta-academica?combine=&field_program_type_target_id=59&field_faculty_target_id_entityreference_filter=All">Doctorados</Link>
       </li>
       <li>
-        <Link href="/course-details">Web Design</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/oferta-academica?combine=&field_program_type_target_id=94&field_faculty_target_id_entityreference_filter=All">Educación continuada</Link>
       </li>
       <li>
-        <Link href="/course-details">SEO Optimize</Link>
+        <Link target="_blank" href="https://www.youtube.com/embed/xUnWyPfP8Uo">Video institucional</Link>
       </li>
     </Fragment>
   ),
   Resources = () => (
     <Fragment>
       <li>
-        <Link href="/contact">Community</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/reglamentos">Reglamentos</Link>
       </li>
       <li>
-        <Link href="/contact">Support</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/resoluciones">Resoluciones</Link>
       </li>
       <li>
-        <Link href="/contact">Video Guides</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/gestion-integral">Gestión integral</Link>
       </li>
       <li>
-        <Link href="/contact">Documentation</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/politica-de-privacidad">Política de privacidad</Link>
       </li>
       <li>
-        <Link href="/contact">Security</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/derechos-pecuniarios-y-valores-de-matricula-pregrado-y-posgrado-vigencia-2023">Derechos pecuniarios y valores de matrícula</Link>
       </li>
       <li>
-        <Link href="/contact">Template</Link>
+        <Link target="_blank" href="https://umanizales.edu.co/rutas-de-atencion">Rutas de atención</Link>
       </li>
     </Fragment>
   ),
@@ -83,13 +79,7 @@ const FollowIcon = () => (
         <Link href="/faqs">Faqs</Link>
       </li>
       <li>
-        <Link href="/contact">Links</Link>
-      </li>
-      <li>
         <Link href="/about">About</Link>
-      </li>
-      <li>
-        <Link href="/contact">Payments</Link>
       </li>
     </Fragment>
   ),
@@ -99,118 +89,17 @@ const FollowIcon = () => (
       reserved.
     </p>
   ),
-  DefaultFooter = ({ scrollTop }) => (
-    <footer className="main-footer bg-blue">
-      <div className="container">
-        <div className="row justify-content-between text-white pt-75">
-          <div className="col-lg-3 col-sm-4">
-            <div className="footer-widget about-widget">
-              <h5 className="footer-title">About Us</h5>
-              <p>
-                Sit amet consectetur adipiscin seeiusmod tempor incididunt ut
-                dolore magna aliqu asusp disse ultrices gravida commodo
-              </p>
-              <h5 className="pt-5">Follow Us</h5>
-              <div className="social-style-one">
-                <FollowIcon />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-2 col-md-3 col-sm-4">
-            <div className="footer-widget menu-widget">
-              <h5 className="footer-title">Courses</h5>
-              <ul>
-                <Courses />
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-2 col-md-3 col-sm-4">
-            <div className="footer-widget menu-widget">
-              <h5 className="footer-title">Resources</h5>
-              <ul>
-                <Resources />
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-5">
-            <div className="row">
-              <div className="col-sm-6">
-                <div className="footer-widget contact-info-widget">
-                  <h5 className="footer-title">Get In Touch</h5>
-                  <ul>
-                    <li>
-                      <i className="fas fa-map-marker-alt" /> 55 Main Street,
-                      2nd Block, New York
-                    </li>
-                    <li>
-                      <i className="far fa-envelope" />{" "}
-                      <a href="mailto:support@gmail.com">support@gmail.com</a>
-                    </li>
-                    <li>
-                      <i className="fas fa-phone" />{" "}
-                      <a href="callto:+0123456789">+012 (345) 67 89</a>
-                    </li>
-                    <li>
-                      <i className="far fa-clock" /> Sunday - Friday,
-                      <br /> 08 am - 05 pm
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-sm-6">
-                <div className="footer-widget video-widget">
-                  <p>Quis autem vel eum iure repre enderit voluptate</p>
-                  <div className="video-widget overlay my-20">
-                    <img src="assets/images/footer/video.jpg" alt="Video" />
-                    <a
-                      href="https://www.youtube.com/watch?v=9Y7ma241N8k"
-                      className="mfp-iframe video-play"
-                    >
-                      <i className="fas fa-play" />
-                    </a>
-                  </div>
-                  <Link className="read-more" href="/about">
-                    view more <i className="fas fa-arrow-right" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="copyright-area bg-dark-blue text-white rel">
-        <div className="container">
-          <div className="copyright-inner">
-            <CopyRight />
-            <ul className="footer-menu">
-              <FooterBottom />
-            </ul>
-          </div>
-        </div>
-        {/* Scroll Top Button */}
-        <button
-          className="scroll-top scroll-to-target"
-          data-target="html"
-          style={{ display: "inline-block" }}
-          onClick={() => scrollTop()}
-        >
-          <span className="fas fa-angle-double-up" />
-        </button>
-      </div>
-    </footer>
-  ),
   Footer1 = ({ scrollTop }) => (
     <footer className="main-footer bg-blue text-white pt-75">
       <div className="container">
         <div className="row justify-content-between">
           <div className="col-lg-3 col-sm-4">
             <div className="footer-widget about-widget">
-              <h5 className="footer-title">About Us</h5>
+              <h5 className="footer-title">Sobre nosotros</h5>
               <p>
-                Sit amet consectetur adipiscin seeiusmod tempor incididunt ut
-                dolore magna aliqu asusp disse ultrices gravida commodo
+              La Universidad Manizales es una institución educativa comprometida con la excelencia académica y la formación integral de sus estudiantes. 
               </p>
-              <h5 className="pt-5">Follow Us</h5>
+              <h5 className="pt-5">Síguenos</h5>
               <div className="social-style-one">
                 <FollowIcon />
               </div>
@@ -218,7 +107,7 @@ const FollowIcon = () => (
           </div>
           <div className="col-lg-2 col-md-3 col-sm-4">
             <div className="footer-widget menu-widget">
-              <h5 className="footer-title">Courses</h5>
+              <h5 className="footer-title">Estudiar en la UMANIZALES</h5>
               <ul>
                 <Courses />
               </ul>
@@ -226,7 +115,7 @@ const FollowIcon = () => (
           </div>
           <div className="col-lg-2 col-md-3 col-sm-4">
             <div className="footer-widget menu-widget">
-              <h5 className="footer-title">Resources</h5>
+              <h5 className="footer-title">Normativas</h5>
               <ul>
                 <Resources />
               </ul>
@@ -236,42 +125,22 @@ const FollowIcon = () => (
             <div className="row">
               <div className="col-sm-6">
                 <div className="footer-widget contact-info-widget">
-                  <h5 className="footer-title">Get In Touch</h5>
+                  <h5>Contáctanos</h5>
                   <ul>
                     <li>
-                      <i className="fas fa-map-marker-alt" /> 55 Main Street,
-                      2nd Block, New York
+                      <i className="fas fa-map-marker-alt" /> Cra 9 a # 19-03
+                        Manizales, Caldas.
+                        Colombia
                     </li>
                     <li>
                       <i className="far fa-envelope" />{" "}
-                      <a href="mailto:support@gmail.com">support@gmail.com</a>
+                      <a href="mailto:contacto@umanizales.edu.co">contacto@umanizales.edu.co</a>
                     </li>
                     <li>
                       <i className="fas fa-phone" />{" "}
-                      <a href="callto:+0123456789">+012 (345) 67 89</a>
-                    </li>
-                    <li>
-                      <i className="far fa-clock" /> Sunday - Friday,
-                      <br /> 08 am - 05 pm
+                      <a href="callto:+0123456789">+57 606887 96 80</a>
                     </li>
                   </ul>
-                </div>
-              </div>
-              <div className="col-sm-6">
-                <div className="footer-widget video-widget">
-                  <p>Quis autem vel eum iure repre enderit voluptate</p>
-                  <div className="video-widget overlay my-20">
-                    <img src="assets/images/footer/video.jpg" alt="Video" />
-                    <a
-                      href="https://www.youtube.com/watch?v=9Y7ma241N8k"
-                      className="mfp-iframe video-play"
-                    >
-                      <i className="fas fa-play" />
-                    </a>
-                  </div>
-                  <Link className="read-more" href="/about">
-                    view more <i className="fas fa-arrow-right" />
-                  </Link>
                 </div>
               </div>
             </div>
@@ -293,280 +162,6 @@ const FollowIcon = () => (
           data-target="html"
           style={{ display: "inline-block" }}
           onClick={() => scrollTop()}
-        >
-          <span className="fas fa-angle-double-up" />
-        </button>
-      </div>
-    </footer>
-  ),
-  Footer3 = ({ scrollTop }) => (
-    <footer className="main-footer bg-black">
-      <div className="container">
-        <div className="row justify-content-between text-white pt-65">
-          <div className="col-lg-3 col-sm-4">
-            <div className="footer-widget about-widget">
-              <h5 className="footer-title">About Us</h5>
-              <p>
-                Sit amet consectetur adipiscin seeiusmod tempor incididunt ut
-                dolore magna aliqu asusp disse ultrices gravida commodo
-              </p>
-              <h5 className="pt-5">Follow Us</h5>
-              <div className="social-style-one">
-                <FollowIcon />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-2 col-md-3 col-sm-4">
-            <div className="footer-widget menu-widget">
-              <h5 className="footer-title">Courses</h5>
-              <ul>
-                <Courses />
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-2 col-md-3 col-sm-4">
-            <div className="footer-widget menu-widget">
-              <h5 className="footer-title">Resources</h5>
-              <ul>
-                <Resources />
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-5">
-            <div className="row">
-              <div className="col-sm-6">
-                <div className="footer-widget contact-info-widget">
-                  <h5 className="footer-title">Get In Touch</h5>
-                  <ul>
-                    <li>
-                      <i className="fas fa-map-marker-alt" /> 55 Main Street,
-                      2nd Block, New York
-                    </li>
-                    <li>
-                      <i className="far fa-envelope" />{" "}
-                      <a href="mailto:support@gmail.com">support@gmail.com</a>
-                    </li>
-                    <li>
-                      <i className="fas fa-phone" />{" "}
-                      <a href="callto:+0123456789">+012 (345) 67 89</a>
-                    </li>
-                    <li>
-                      <i className="far fa-clock" /> Sunday - Friday,
-                      <br /> 08 am - 05 pm
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-sm-6">
-                <div className="footer-widget newsletter-widget">
-                  <h5 className="footer-title">Newsletter</h5>
-                  <form onSubmit={(e) => e.preventDefault()} action="#">
-                    <h6>Every Single Updates and Notifications</h6>
-                    <div className="email-input">
-                      <label htmlFor="footer-newsletter">
-                        <i className="far fa-envelope" />
-                      </label>
-                      <input
-                        type="email"
-                        id="footer-newsletter"
-                        placeholder="Enter Email"
-                        required=""
-                      />
-                    </div>
-                    <button className="theme-btn style-two" type="submit">
-                      sign up <i className="fas fa-arrow-right" />
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="copyright-area bg-light-blue text-white rel">
-        <div className="container">
-          <div className="copyright-inner">
-            <CopyRight />
-            <ul className="footer-menu">
-              <FooterBottom />
-            </ul>
-          </div>
-        </div>
-        {/* Scroll Top Button */}
-        <button
-          style={{ display: "inline-block" }}
-          onClick={() => scrollTop()}
-          className="scroll-top scroll-to-target"
-          data-target="html"
-        >
-          <span className="fas fa-angle-double-up" />
-        </button>
-      </div>
-    </footer>
-  ),
-  Footer4 = ({ scrollTop }) => (
-    <footer className="main-footer footer-two bg-blue-two text-white">
-      <div className="container">
-        <div className="logo-inner style-two pt-85 pb-35">
-          <div className="logo-item">
-            <Link href="/about">
-              <img
-                src="assets/images/client-logos/client-logo-two1.png"
-                alt="Client Logo"
-              />
-            </Link>
-          </div>
-          <div className="logo-item">
-            <Link href="/about">
-              <img
-                src="assets/images/client-logos/client-logo-two5.png"
-                alt="Client Logo"
-              />
-            </Link>
-          </div>
-          <div className="logo-item">
-            <Link href="/about">
-              <img
-                src="assets/images/client-logos/client-logo-two3.png"
-                alt="Client Logo"
-              />
-            </Link>
-          </div>
-          <div className="logo-item">
-            <Link href="/about">
-              <img
-                src="assets/images/client-logos/client-logo-two4.png"
-                alt="Client Logo"
-              />
-            </Link>
-          </div>
-          <div className="logo-item">
-            <Link href="/about">
-              <img
-                src="assets/images/client-logos/client-logo-two2.png"
-                alt="Client Logo"
-              />
-            </Link>
-          </div>
-          <div className="logo-item">
-            <Link href="/about">
-              <img
-                src="assets/images/client-logos/client-logo-two6.png"
-                alt="Client Logo"
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="row large-gap justify-content-between pt-85">
-          <div className="col-lg-3 col-sm-4">
-            <div className="footer-widget about-widget">
-              <div className="footer-logo mb-25">
-                <Link href="/">
-                  <a>
-                    <img src="assets/images/logos/logo-four.png" alt="Logo" />
-                  </a>
-                </Link>
-              </div>
-              <p>
-                Sit amet consectetur adipiscin seeiusmod tempor incididunt ut
-                dolore magna aliqu asusp{" "}
-              </p>
-              <div className="social-style-one pt-10">
-                <FollowIcon />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-2 col-md-3 col-sm-4">
-            <div className="footer-widget menu-widget">
-              <h5 className="footer-title">Courses</h5>
-              <ul>
-                <Courses />
-              </ul>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-4">
-            <div className="footer-widget contact-info-widget">
-              <h5 className="footer-title">Get In Touch</h5>
-              <ul>
-                <li>
-                  <i className="fas fa-map-marker-alt" /> 55 Main Street, 2nd
-                  Block, New York
-                </li>
-                <li>
-                  <i className="far fa-envelope" />{" "}
-                  <a href="mailto:support@gmail.com">support@gmail.com</a>
-                </li>
-                <li>
-                  <i className="fas fa-phone" />{" "}
-                  <a href="callto:+0123456789">+012 (345) 67 89</a>
-                </li>
-                <li>
-                  <i className="far fa-clock" /> Sunday - Friday,
-                  <br /> 08 am - 05 pm
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-3">
-            <div className="footer-widget gallery-widget">
-              <h5 className="footer-title">Gallery</h5>
-              <div className="gallery-widget-wrap">
-                <div className="gallery-widget-item">
-                  <img src="assets/images/widgets/gallery1.jpg" alt="Gallery" />
-                  <a href="assets/images/widgets/gallery1.jpg">
-                    <i className="fab fa-instagram" />
-                  </a>
-                </div>
-                <div className="gallery-widget-item">
-                  <img src="assets/images/widgets/gallery2.jpg" alt="Gallery" />
-                  <a href="assets/images/widgets/gallery2.jpg">
-                    <i className="fab fa-instagram" />
-                  </a>
-                </div>
-                <div className="gallery-widget-item">
-                  <img src="assets/images/widgets/gallery3.jpg" alt="Gallery" />
-                  <a href="assets/images/widgets/gallery3.jpg">
-                    <i className="fab fa-instagram" />
-                  </a>
-                </div>
-                <div className="gallery-widget-item">
-                  <img src="assets/images/widgets/gallery4.jpg" alt="Gallery" />
-                  <a href="assets/images/widgets/gallery4.jpg">
-                    <i className="fab fa-instagram" />
-                  </a>
-                </div>
-                <div className="gallery-widget-item">
-                  <img src="assets/images/widgets/gallery5.jpg" alt="Gallery" />
-                  <a href="assets/images/widgets/gallery5.jpg">
-                    <i className="fab fa-instagram" />
-                  </a>
-                </div>
-                <div className="gallery-widget-item">
-                  <img src="assets/images/widgets/gallery6.jpg" alt="Gallery" />
-                  <a href="assets/images/widgets/gallery6.jpg">
-                    <i className="fab fa-instagram" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="copyright-area rel">
-        <div className="container">
-          <div className="copyright-inner">
-            <CopyRight />
-            <ul className="footer-menu">
-              <FooterBottom />
-            </ul>
-          </div>
-        </div>
-        {/* Scroll Top Button */}
-        <button
-          style={{ display: "inline-block" }}
-          onClick={() => scrollTop()}
-          className="scroll-top scroll-to-target"
-          data-target="html"
         >
           <span className="fas fa-angle-double-up" />
         </button>

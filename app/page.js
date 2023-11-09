@@ -193,7 +193,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-1s">
                 <img
-                  src="assets/images/universidad/img1.jpeg"
+                  src="assets/images/universidad/img7.jpeg"
                   alt="UManizales"
                 />
                 <div className="instagram-hover">
@@ -207,7 +207,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-2s">
                 <img
-                  src="assets/images/universidad/img2.jpeg"
+                  src="assets/images/universidad/img9.jpg"
                   alt="UManizales"
                 />
                 <div className="instagram-hover">
