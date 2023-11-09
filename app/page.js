@@ -221,7 +221,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-3s">
                 <img
-                  src="assets/images/universidad/img3.jpeg"
+                  src="assets/images/universidad/img10.jpg"
                   alt="UManizales"
                 />
                 <div className="instagram-hover">
@@ -235,7 +235,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-4s">
                 <img
-                  src="assets/images/universidad/img6.jpeg"
+                  src="assets/images/universidad/img12.jpg"
                   alt="UManizles"
                 />
                 <div className="instagram-hover">
@@ -249,7 +249,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-5s">
                 <img
-                  src="assets/images/universidad/img5.jpg"
+                  src="assets/images/universidad/img13.jpg"
                   alt="UManizales"
                 />
                 <div className="instagram-hover">
