@@ -42,7 +42,7 @@ const Index1Isotope = () => {
         <div className="row justify-content-center">
           <div className="col-xl-6 col-lg-7 col-md-8">
             <div className="section-title text-center mb-40">
-              <h2>Best Solutions For Life Coach Solutions</h2>
+              <h2>Explora Perfiles</h2>
             </div>
           </div>
         </div>
@@ -52,14 +52,14 @@ const Index1Isotope = () => {
             className={`c-pointer ${activeBtn("*")}`}
             onClick={handleFilterKeyChange("*")}
           >
-            Show All
+            Todos
           </li>
           <li
             data-filter=".design"
             className={`c-pointer ${activeBtn("design")}`}
             onClick={handleFilterKeyChange("design")}
           >
-            Web Design
+            Diseño Web
           </li>
           <li
             data-filter=".marketing"
@@ -73,21 +73,21 @@ const Index1Isotope = () => {
             className={`c-pointer ${activeBtn("development")}`}
             onClick={handleFilterKeyChange("development")}
           >
-            Development
+            Desarrollo
           </li>
           <li
             data-filter=".technology"
             className={`c-pointer ${activeBtn("technology")}`}
             onClick={handleFilterKeyChange("technology")}
           >
-            IT &amp; Technology
+            TIC
           </li>
           <li
             data-filter=".photography"
             className={`c-pointer ${activeBtn("photography")}`}
             onClick={handleFilterKeyChange("photography")}
           >
-            Photography
+            Redes
           </li>
         </ul>
         <div className="row coach-active justify-content-center">

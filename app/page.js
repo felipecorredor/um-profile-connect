@@ -193,13 +193,13 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-1s">
                 <img
-                  src="assets/images/instagram/instagram1.jpg"
-                  alt="Instagram"
+                  src="assets/images/universidad/img1.jpeg"
+                  alt="UManizales"
                 />
                 <div className="instagram-hover">
-                  <a href="assets/images/instagram/instagram1.jpg">
-                    <i className="fab fa-instagram" />
-                    <span>Instagram</span>
+                  <a href="https://umanizales.edu.co/" target="_blank">
+                    <i className="fas fa-link" />
+                    <span>Visitar</span>
                   </a>
                 </div>
               </div>
@@ -207,13 +207,13 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-2s">
                 <img
-                  src="assets/images/instagram/instagram2.jpg"
-                  alt="Instagram"
+                  src="assets/images/universidad/img2.jpeg"
+                  alt="UManizales"
                 />
                 <div className="instagram-hover">
-                  <a href="assets/images/instagram/instagram2.jpg">
-                    <i className="fab fa-instagram" />
-                    <span>Instagram</span>
+                <a href="https://umanizales.edu.co/" target="_blank">
+                    <i className="fas fa-link" />
+                    <span>Visitar</span>
                   </a>
                 </div>
               </div>
@@ -221,13 +221,13 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-3s">
                 <img
-                  src="assets/images/instagram/instagram3.jpg"
-                  alt="Instagram"
+                  src="assets/images/universidad/img3.jpeg"
+                  alt="UManizales"
                 />
                 <div className="instagram-hover">
-                  <a href="assets/images/instagram/instagram3.jpg">
-                    <i className="fab fa-instagram" />
-                    <span>Instagram</span>
+                <a href="https://umanizales.edu.co/" target="_blank">
+                    <i className="fas fa-link" />
+                    <span>Visitar</span>
                   </a>
                 </div>
               </div>
@@ -235,13 +235,13 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-4s">
                 <img
-                  src="assets/images/instagram/instagram4.jpg"
-                  alt="Instagram"
+                  src="assets/images/universidad/img6.jpeg"
+                  alt="UManizles"
                 />
                 <div className="instagram-hover">
-                  <a href="assets/images/instagram/instagram4.jpg">
-                    <i className="fab fa-instagram" />
-                    <span>Instagram</span>
+                <a href="https://umanizales.edu.co/" target="_blank">
+                    <i className="fas fa-link" />
+                    <span>Visitar</span>
                   </a>
                 </div>
               </div>
@@ -249,13 +249,13 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-5s">
                 <img
-                  src="assets/images/instagram/instagram5.jpg"
-                  alt="Instagram"
+                  src="assets/images/universidad/img5.jpg"
+                  alt="UManizales"
                 />
                 <div className="instagram-hover">
-                  <a href="assets/images/instagram/instagram5.jpg">
-                    <i className="fab fa-instagram" />
-                    <span>Instagram</span>
+                <a href="https://umanizales.edu.co/" target="_blank">
+                    <i className="fas fa-link" />
+                    <span>Visitar</span>
                   </a>
                 </div>
               </div>
@@ -263,13 +263,13 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-6s">
                 <img
-                  src="assets/images/instagram/instagram6.jpg"
-                  alt="Instagram"
+                  src="assets/images/universidad/img4.jpg"
+                  alt="UManizales"
                 />
                 <div className="instagram-hover">
-                  <a href="assets/images/instagram/instagram6.jpg">
-                    <i className="fab fa-instagram" />
-                    <span>Instagram</span>
+                <a href="https://umanizales.edu.co/" target="_blank">
+                    <i className="fas fa-link" />
+                    <span>Visitar</span>
                   </a>
                 </div>
               </div>

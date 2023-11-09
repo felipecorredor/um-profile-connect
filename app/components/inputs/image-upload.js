@@ -37,7 +37,7 @@ const ImageUpload = ({ onChange, value }) => {
             )}
 
             {value && (
-              <div className="image">
+              <div className="image fadeInUp delay-0-3s img-item">
                 <img
                   alt="Upload"
                   fill
@@ -48,6 +48,11 @@ const ImageUpload = ({ onChange, value }) => {
                   }}
                   src={value}
                 />
+
+                <div className="img-item-hover d-flex flex-column">
+                    <i className="fas fa-image" />
+                    <span>Cambiar foto</span>
+                </div>
               </div>
             )}
           </div>

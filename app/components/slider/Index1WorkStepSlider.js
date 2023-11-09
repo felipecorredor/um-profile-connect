@@ -84,9 +84,7 @@ export default class Index1WorkStepSlider extends Component {
             <div className="content">
               <h4>Conecta y Toma Acción</h4>
               <p>
-                Establece conexiones con estudiantes y empresas. Toma medidas
-                para iniciar conversaciones y avanzar en tu carrera o proceso de
-                contratación.
+                Establece conexiones con estudiantes y empresas. Toma medidas para impulsar tu progreso en tu carrera o en tu proceso de contratación.
               </p>
             </div>
           </div>
