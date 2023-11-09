@@ -12,8 +12,10 @@ export async function POST(request) {
     experiences,
     firstName,
     lastName,
-    phoneNumber,
+    position,
     skills,
+    imageSrc,
+    semester,
   } = body;
 
   const student = await prisma.student.create({
@@ -25,8 +27,10 @@ export async function POST(request) {
       experiences,
       firstName,
       lastName,
-      phoneNumber,
+      position,
       skills,
+      imageSrc,
+      semester,
     },
   });
 

@@ -1,20 +1,44 @@
 import React from "react";
 import { Form, FormControl } from "react-bootstrap";
 
-const InputText = ({ icon, name, placeholder, register }) => {
+const InputText = ({
+  type = "text",
+  icon,
+  name,
+  min,
+  max,
+  placeholder,
+  register,
+  errors = {},
+  ...rest
+}) => {
   return (
     <Form.Group>
       <label htmlFor="full-name">
         <i className={icon} />
       </label>
       <FormControl
-        type="text"
+        type={type}
         id={name}
         name={name}
         className="form-control"
         placeholder={placeholder}
-        {...register(name)}
+        {...register(name, {
+          required: "Campo obligatorio",
+          min: {
+            value: min,
+            message: "Debe ser mayor a 0",
+          },
+          max: {
+            value: max,
+            message: "Debe ser menor a 10",
+          },
+        })}
+        {...rest}
       />
+      <span className="form-error">
+        {errors[name] && errors[name]?.message}
+      </span>
     </Form.Group>
   );
 };

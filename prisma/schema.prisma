@@ -32,9 +32,11 @@ model Student {
   lastName            String
   dateOfBirth         DateTime?
   email               String
-  phoneNumber         String
+  phoneNumber         String?
   description         String
-  profilePictureUrl   String?
+  position            String?
+  imageSrc            String
+  semester            Int
   createdAt           DateTime @default(now())
 
   user   User @relation(fields: [userId], references: [id])

@@ -11,16 +11,17 @@ import axios from "axios";
 import EducationForm from "../education";
 import ImageUpload from "../../inputs/image-upload";
 import { useRouter } from "next/navigation";
+import { isNotEmptyObject } from "@/sources/utils";
 
 const DEFAULT_VALUES = {
   firstName: "John",
   lastName: "Doe",
   email: "johndoe@example.com",
   dateOfBirth: new Date().toLocaleString() + "",
-  phoneNumber: "+1 (555) 123-4567",
+  position: "Frontend Developer",
   description:
     "I am a dedicated professional with a strong background in software development. I have a passion for creating innovative solutions and thrive in collaborative team environments. My goal is to continue honing my skills and contributing to exciting projects in the tech industry.",
-
+  semester: 2,
   skills: [
     {
       name: "React",
@@ -66,17 +67,24 @@ const CreateStudent = () => {
     defaultValues: DEFAULT_VALUES,
   });
 
+  const errors = methods.formState.errors;
+
   const router = useRouter();
 
   const setCustomValue = (id, value) => {
-    methods.setValue(id, value, {
-      shouldDirty: true,
-      shouldTouch: true,
-      shouldValidate: true,
-    });
+    methods.setValue(id, value);
   };
 
   const onSubmit = (data) => {
+    if (!data?.imageSrc) {
+      methods.setError("imageSrc", {
+        type: "custom",
+        message: "La imagen de perfil requerida",
+      });
+      toast.error("La imagen de perfil es requerida");
+      return;
+    }
+
     axios
       .post("/api/students", data)
       .then(async () => {
@@ -84,24 +92,18 @@ const CreateStudent = () => {
         router.refresh();
       })
       .catch((error) => {
+        if (isNotEmptyObject(errors)) {
+          toast.error("Revisa los campos obligatorios");
+          return;
+        }
         toast.error(error.message);
       });
   };
 
-  const watchImageSrc = methods.watch("profilePictureUrl");
+  const watchImageSrc = methods.watch("imageSrc");
 
   return (
     <FormProvider {...methods}>
-      <div className="image mb-35">
-        {/* <img
-          src="assets/images/coachs/course-details.jpg"
-          alt="Course Details"
-        /> */}
-        <ImageUpload
-          onChange={(value) => setCustomValue("profilePictureUrl", value)}
-          value={watchImageSrc}
-        />
-      </div>
       <div className="col-lg-12 pt-30 pb-30">
         <form
           onSubmit={methods.handleSubmit(onSubmit)}
@@ -109,6 +111,15 @@ const CreateStudent = () => {
           className="faq-form wow fadeInLeft delay-0-2s"
           name="faq-form"
         >
+          <div className="image mb-35">
+            <ImageUpload
+              onChange={(value) => setCustomValue("imageSrc", value)}
+              value={watchImageSrc}
+            />
+            {errors?.imageSrc && (
+              <span className="form-error">{errors?.imageSrc?.message}</span>
+            )}
+          </div>
           <div>
             <section>
               <BasicForm />

@@ -6,7 +6,9 @@ import { CldUploadWidget } from "next-cloudinary";
 const ImageUpload = ({ onChange, value }) => {
   const handleUpload = useCallback(
     (result) => {
-      onChange(result.info.secure_url);
+      if (result) {
+        onChange(result.info.secure_url);
+      }
     },
     [onChange]
   );
