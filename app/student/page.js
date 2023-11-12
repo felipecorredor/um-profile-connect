@@ -3,8 +3,10 @@
 import PageBanner from "@/app/components/PageBanner";
 import Layout from "@/app/layout/Layout";
 import { fetcher } from "@/sources/utils";
+import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+// import { } from 'next-'
 
 import useSWR from "swr";
 
@@ -32,6 +34,8 @@ const StudentPage = () => {
     return <div className="preloading" />;
   }
 
+  console.log("student::", student);
+
   return (
     <Layout>
       <PageBanner pageName={"Detalle del estudiante"} />
@@ -58,212 +62,127 @@ const StudentPage = () => {
                 </h2>
                 <ul className="author-date-enroll">
                   <li>
-                    <img
-                      src="assets/images/coachs/couse-author.jpg"
-                      alt="Authro"
+                    <Image
+                      src={student.imageSrc}
+                      alt="Universidad de Manizales"
+                      height={200}
+                      width={200}
                     />
                     <h6>Donald J. Miller</h6>
                   </li>
                   <li>
                     <i className="fas fa-cloud-upload-alt" /> Last Update
-                    February 15, 2022
+                    {student.createdAt}
                   </li>
                   <li>
                     <i className="far fa-user" /> 25 Enrolled
                   </li>
                 </ul>
                 <div className="image mb-35">
-                  <img
-                    src="assets/images/coachs/course-details.jpg"
-                    alt="Course Details"
+                  <Image
+                    src={student.imageSrc}
+                    alt="Universidad de Manizales"
+                    height={350}
+                    width={700}
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                  quia voluptas sit aspernatur autodit aut fugit sed quia
-                  consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam este qui dolorem ipsum quia
-                  dolor sit amet, consectetur, adipisci velit, sed quia non
-                  numquam eius modis tempora incidunt ut labore et dolore magnam
-                  aliquam quaerat voluptatem enim ad minima veniam quis nostrum
-                  exercitationem ullam corporis suscipit laboriosam, nisi ut
-                  aliquid ex ea commo quatur? Quis autem vel eum iure
-                  reprehenderit quin ea voluptate velit esse quam nihil
-                  molestiae consequatur vel illum qui dolorem eum fugiat quo
-                  voluptas nulla pariatur
-                </p>
-                <h3 className="mt-40">Requirements</h3>
-                <ul className="list-style-two mb-45">
-                  <li>
-                    DevTools Debugging Tips And Shortcuts (Chrome, Firefox,
-                    Edge)
-                  </li>
-                  <li>
-                    Front-End Performance Checklist 2021 (PDF, Apple Pages, MS
-                    Word)
-                  </li>
-                  <li>
-                    A Smashing Guide To The World Of Search Engine Optimization
-                  </li>
-                </ul>
-                <h3>Target Audience</h3>
-                <ul className="list-style-two mb-45">
-                  <li>Any Job Holders, Students</li>
-                  <li>Corporate Trainer</li>
-                  <li>Educators (Teachers, Lecturer, Faculty)</li>
+                <p>{student.description}</p>
+                <h3 className="mt-40">Habilidades</h3>
+                <div className="widget-menu">
+                  <ul className="list-style-two mb-45">
+                    {student?.skills.map((skill, index) => (
+                      <li key={index}>{skill.name}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <h3>Experiencia</h3>
+                <ul className="student-experiences-list wow fadeInUp delay-0-2s">
+                  {student?.experiences?.map((experience, index) => (
+                    <div key={index} className="experience-card">
+                      <h3 className="experience-position">
+                        {experience.position}
+                      </h3>
+                      <p className="experience-company">
+                        <b>Empresa:</b> {experience.company}
+                      </p>
+                      <p className="experience-location">
+                        <b>Ubicación:</b> {experience.location}
+                      </p>
+                      <p className="experience-type">
+                        <b>Tipo de empleo:</b> {experience.typeEmployment}
+                      </p>
+                      <p className="experience-description">
+                        <b>Descripción:</b> {experience.description}
+                      </p>
+                    </div>
+                  ))}
                 </ul>
 
-                <h3>Instructors</h3>
-                <div className="course-instructor pt-10 pb-55 wow fadeInUp delay-0-2s">
-                  <div className="row align-items-center">
-                    <div className="col-sm-5">
-                      <div className="instructor-image">
-                        <img
-                          src="assets/images/teams/instructor.jpg"
-                          alt="instructor"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-4 col-sm-6">
-                      <div className="instructor-details">
-                        <h4>John D. Mathews</h4>
-                        <span className="designations">
-                          Senior Web Designer
-                        </span>
-                        <div className="ratting mb-10">
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <span>(50)</span>
-                        </div>
-                        <p>
-                          Sit amet consectet adipising elit sed do eiusmod
-                          incididunt ut labore et dolore magna
+                <div className="mt-45">
+                  <h3>Educación</h3>
+                  <ul className="student-experiences-list wow fadeInUp delay-0-2s">
+                    {student?.educations?.map((education, index) => (
+                      <div key={index} className="experience-card">
+                        <h3 className="experience-position">
+                          {education.university}
+                        </h3>
+                        <p className="experience-company">
+                          <b>Titulo:</b> {education.degree}
                         </p>
-                        <h5>Follow Me</h5>
-                        <div className="social-style-two">
-                          <Link href="/contact">
-                            <i className="fab fa-twitter" />
-                          </Link>
-                          <Link href="/contact">
-                            <i className="fab fa-facebook-f" />
-                          </Link>
-                          <Link href="/contact">
-                            <i className="fab fa-instagram" />
-                          </Link>
-                          <Link href="/contact">
-                            <i className="fab fa-pinterest-p" />
-                          </Link>
-                        </div>
+                        <p className="experience-location">
+                          <b>Descripción:</b> {education.description}
+                        </p>
                       </div>
-                    </div>
-                  </div>
+                    ))}
+                  </ul>
                 </div>
-                <h3>Student Feedback</h3>
-                <div className="student-feedback pt-10 wow fadeInUp delay-0-2s pb-100">
-                  <div className="row">
-                    <div className="col-sm-5">
-                      <div className="student-average-feedback bg-green text-center text-white">
-                        <b>5.0</b>
-                        <div className="ratting mb-10">
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                        </div>
-                        <h6>Total 1 Rating</h6>
-                      </div>
-                    </div>
-                    <div className="col-sm-7 align-self-center">
-                      <div className="student-feedback-details">
-                        <div className="student-feedback-author mb-20">
-                          <img
-                            src="assets/images/coachs/feedback-author.jpg"
-                            alt="Authro"
+
+                <div className="mt-45">
+                  <h3>Detalles</h3>
+                  <div className="course-instructor pt-10 pb-55 wow fadeInUp delay-0-2s">
+                    <div className="row align-items-center">
+                      <div className="col-sm-5">
+                        <div className="instructor-image">
+                          <Image
+                            src={student.imageSrc}
+                            alt="estudiante Universidad de Manizales"
+                            width={600}
+                            height={300}
                           />
-                          <div className="content">
-                            <h4>Lucius D. Thomas</h4>
-                            <span className="designations">
-                              IT Students (Basic)
-                            </span>
-                          </div>
                         </div>
-                        <div className="ratting-total">
-                          <div className="ratting-total-item">
-                            <div className="ratting mb-10">
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <span>(5)</span>
-                            </div>
-                            <span className="ratting-bar">
-                              <span style={{ width: "100%" }} />
-                            </span>
-                            <span className="ratting-number">1 Rating</span>
-                          </div>
-                          <div className="ratting-total-item">
-                            <div className="ratting mb-10">
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star" />
-                              <span>(4)</span>
-                            </div>
-                            <span className="ratting-bar">
-                              <span style={{ width: 0 }} />
-                            </span>
-                            <span className="ratting-number">0 Rating</span>
-                          </div>
-                          <div className="ratting-total-item">
-                            <div className="ratting mb-10">
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <span>(3)</span>
-                            </div>
-                            <span className="ratting-bar">
-                              <span style={{ width: 0 }} />
-                            </span>
-                            <span className="ratting-number">0 Rating</span>
-                          </div>
-                          <div className="ratting-total-item">
-                            <div className="ratting mb-10">
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <span>(2)</span>
-                            </div>
-                            <span className="ratting-bar">
-                              <span style={{ width: 0 }} />
-                            </span>
-                            <span className="ratting-number">0 Rating</span>
-                          </div>
-                          <div className="ratting-total-item">
-                            <div className="ratting mb-10">
-                              <i className="fas fa-star selected" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <span>(1)</span>
-                            </div>
-                            <span className="ratting-bar">
-                              <span style={{ width: 0 }} />
-                            </span>
-                            <span className="ratting-number">0 Rating</span>
+                      </div>
+                      <div className="col-md-4 col-sm-6">
+                        <div className="instructor-details">
+                          <h4>
+                            {student.firstName} {student.lastName}
+                          </h4>
+                          <span className="designations">
+                            {student.position}
+                          </span>
+
+                          <p>
+                            Sit amet consectet adipising elit sed do eiusmod
+                            incididunt ut labore et dolore magna. Lorem Ipsum es
+                            simplemente el texto de relleno de las imprentas y
+                            archivos de texto. Lorem Ipsum ha sido el texto de
+                            relleno estándar de las industrias desde el año 1500
+                          </p>
+                          <h5>Follow Me</h5>
+                          <div className="social-style-two">
+                            <Link href="/contact">
+                              <i className="fab fa-twitter" />
+                            </Link>
+                            <Link href="/contact">
+                              <i className="fab fa-facebook-f" />
+                            </Link>
+                            <Link href="/contact">
+                              <i className="fab fa-instagram" />
+                            </Link>
+                            <Link href="/contact">
+                              <i className="fab fa-pinterest-p" />
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -333,116 +252,6 @@ const StudentPage = () => {
                       <i className="fab fa-pinterest-p" />
                     </Link>
                   </div>
-                </div>
-                <div className="widget widget-menu wow fadeInUp delay-0-2s">
-                  <h4 className="widget-title">Category</h4>
-                  <ul>
-                    <li>
-                      <Link href="/course-list">Business Coach</Link>{" "}
-                      <span>(25)</span>
-                    </li>
-                    <li>
-                      <Link href="/course-list">Life Coach</Link>{" "}
-                      <span>(07)</span>
-                    </li>
-                    <li>
-                      <Link href="/course-list">Health Coach</Link>{" "}
-                      <span>(12)</span>
-                    </li>
-                    <li>
-                      <Link href="/course-list">Web Design</Link>{" "}
-                      <span>(55)</span>
-                    </li>
-                    <li>
-                      <Link href="/course-list">Web Development</Link>{" "}
-                      <span>(14)</span>
-                    </li>
-                    <li>
-                      <Link href="/course-list">SEO Optimizations</Link>{" "}
-                      <span>(30)</span>
-                    </li>
-                    <li>
-                      <Link href="/course-list">Digital Analysis</Link>{" "}
-                      <span>(18)</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="widget widget-recent-courses wow fadeInUp delay-0-2s">
-                  <h4 className="widget-title">Recent Courses</h4>
-                  <ul>
-                    <li>
-                      <div className="image">
-                        <img
-                          src="assets/images/widgets/course1.jpg"
-                          alt="Course"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/course-details">
-                            How to Learn Basic Web (UI) Design
-                          </Link>
-                        </h6>
-                        <span>
-                          By <Link href="/course-grid">Williams</Link>
-                        </span>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="image">
-                        <img
-                          src="assets/images/widgets/course2.jpg"
-                          alt="Course"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/course-details">
-                            How to Learn Basic Web Development
-                          </Link>
-                        </h6>
-                        <span>
-                          By <Link href="/course-grid">Somalia</Link>
-                        </span>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="image">
-                        <img
-                          src="assets/images/widgets/course3.jpg"
-                          alt="Course"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/course-details">
-                            How to Learn Basic (SEO) Marketing
-                          </Link>
-                        </h6>
-                        <span>
-                          By <Link href="/course-grid">Blanchard</Link>
-                        </span>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="image">
-                        <img
-                          src="assets/images/widgets/course4.jpg"
-                          alt="Course"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/course-details">
-                            Business Strategy Managements
-                          </Link>
-                        </h6>
-                        <span>
-                          By <Link href="/course-grid">Johnson</Link>
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>

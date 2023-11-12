@@ -1,6 +1,8 @@
 import "./globals.css";
 import ClientOnly from "@/app/components/ClientOnly";
 import ToasterProvider from "./providers/ToasterProvider";
+import LoginModal from "./components/modals/LoginModal/LoginModal";
+import RegisterModal from "./components/modals/RegisterModal/RegisterModal";
 
 export const metadata = {
   title: "Create Next App",
@@ -38,6 +40,8 @@ export default function RootLayout({ children }) {
       <body>
         <ClientOnly>
           <ToasterProvider />
+          <LoginModal />
+          <RegisterModal />
         </ClientOnly>
         <ClientOnly>{children}</ClientOnly>
       </body>

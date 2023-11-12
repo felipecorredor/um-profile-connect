@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import MobileHeader from "./MobileHeader";
 import { stickyNav } from "@/sources/utils";
+import useLoginModal from "../hooks/useLoginModal";
+import useRegisterModal from "../hooks/useRegisterModal";
 
 const Header = ({ header }) => {
   useEffect(() => {
@@ -9,20 +11,28 @@ const Header = ({ header }) => {
   }, []);
   const [navToggle, setNavToggle] = useState(false);
 
+  const registerModal = useRegisterModal();
+  const loginModal = useLoginModal();
+
   switch (header) {
     case 1:
       return (
         <Header1
           navToggle={navToggle}
           setNavToggle={setNavToggle}
-          onOpenRegister={() => {}}
-          onOpenLogin={() => {}}
+          onOpenRegister={registerModal.onOpen}
+          onOpenLogin={loginModal.onOpen}
         />
       );
 
     default:
       return (
-        <DefaultHeader navToggle={navToggle} setNavToggle={setNavToggle} />
+        <DefaultHeader
+          navToggle={navToggle}
+          setNavToggle={setNavToggle}
+          onOpenRegister={registerModal.onOpen}
+          onOpenLogin={loginModal.onOpen}
+        />
       );
   }
 };
@@ -115,7 +125,12 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
       </header>
     </Fragment>
   ),
-  DefaultHeader = ({ navToggle, setNavToggle }) => (
+  DefaultHeader = ({
+    navToggle,
+    setNavToggle,
+    onOpenRegister,
+    onOpenLogin,
+  }) => (
     <Fragment>
       <header className="main-header header-two">
         {/* Header-Top */}
@@ -173,7 +188,10 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
                 {/* Main Menu End*/}
               </div>
               {/* Menu Button */}
-              <div className="menu-btn-sidebar d-flex align-items-center">
+              <div
+                className="menu-btn-sidebar d-flex align-items-center"
+                onClick={() => setNavToggle(!navToggle)}
+              >
                 <button>
                   <i className="far fa-user-circle" />
                 </button>
@@ -185,6 +203,13 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
                     <span className="icon-bar" />
                   </button>
                 </div>
+                {navToggle && (
+                  <div className="dropdown-content">
+                    <a onClick={onOpenLogin}>Iniciar sesión</a>
+                    <a onClick={onOpenRegister}>Registrarse</a>
+                    <a href="#">Cerrar sesión</a>
+                  </div>
+                )}
               </div>
             </div>
           </div>

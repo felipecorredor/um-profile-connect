@@ -19,5 +19,10 @@ export async function GET(request) {
     return null;
   }
 
-  return NextResponse.json({ student });
+  const safeStudent = {
+    ...student,
+    createdAt: student.createdAt.toString(),
+  };
+
+  return NextResponse.json({ student: safeStudent });
 }

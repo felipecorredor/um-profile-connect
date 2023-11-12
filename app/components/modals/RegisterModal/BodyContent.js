@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import { signIn } from "next-auth/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const BodyContent = () => {
   const { handleSubmit, register } = useForm();

@@ -1,7 +1,11 @@
+"use client";
+
 import React from "react";
 import CustomModal from "../Modal";
-import useRegisterModal from "../../../../hooks/useRegisterModal";
+
 import BodyContent from "./BodyContent";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
+import FooterContent from "./FooterContent";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -14,6 +18,7 @@ const RegisterModal = () => {
         title="Crear una cuenta"
         subtitle="Register Here"
         body={<BodyContent />}
+        footer={<FooterContent />}
       />
     </div>
   );

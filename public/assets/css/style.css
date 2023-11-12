@@ -585,6 +585,41 @@ a.theme-btn.style-five:hover {
   margin-bottom: 15px;
 }
 
+.student-experiences-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Ajusta el tamaño de la columna según tus necesidades */
+  gap: 10px; /* Espacio entre las tarjetas de experiencia */
+}
+
+.experience-card {
+  border: 1px solid #e9eaeb;
+  border-radius: 3px;
+  padding: 35px 33px;
+  text-align: left;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.experience-position {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.experience-company,
+.experience-location,
+.experience-type,
+.experience-description {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
 /* List style Two */
 .list-style-two li:not(:last-child) {
   margin-bottom: 8px;
@@ -6847,6 +6882,22 @@ h6,
   margin-left: 0;
 }
 
+.instructor-details p {
+  position: relative;
+  max-width: 300px; /* Ajusta según tus necesidades */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.instructor-details .p::after {
+  content: " ...";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, transparent, white 50%);
+  padding: 0 8px; /* Espaciado entre los puntos y el texto */
+}
 .student-average-feedback {
   padding: 50px;
   height: 100%;
@@ -7183,46 +7234,45 @@ h6,
   border-style: dotted;
   cursor: pointer;
 }
-.img-item{
+.img-item {
   position: relative;
 }
-.img-item-hover{
+.img-item-hover {
   width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    text-align: center;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background: rgba(38, 45, 61, 0.45);
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(38, 45, 61, 0.45);
 }
 
-.img-item-hover  i {
+.img-item-hover i {
   color: white;
   font-size: 18px;
   display: block;
   font-size: 33px;
   margin-bottom: 5px;
 }
-.img-item-hover span{
-  color: #fff
+.img-item-hover span {
+  color: #fff;
 }
 .img-item:hover .img-item-hover {
   opacity: 1;
 }
-
 
 /*******************************************************/
 /**************** 12. Work Step Section ****************/

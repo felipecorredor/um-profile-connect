@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
 import CustomModal from "../Modal";
 
-import useLoginModal from "../../../../hooks/useLoginModal";
 import BodyContent from "./BodyContent";
+import useLoginModal from "@/app/hooks/useLoginModal";
 
 const LoginModal = () => {
   const loginModal = useLoginModal();
