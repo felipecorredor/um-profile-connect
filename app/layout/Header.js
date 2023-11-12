@@ -1,14 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import MobileHeader from "./MobileHeader";
 import { stickyNav } from "@/sources/utils";
 import useLoginModal from "../hooks/useLoginModal";
 import useRegisterModal from "../hooks/useRegisterModal";
+import { signOut } from "next-auth/react";
 
 const Header = ({ header }) => {
   useEffect(() => {
     stickyNav();
   }, []);
+
   const [navToggle, setNavToggle] = useState(false);
 
   const registerModal = useRegisterModal();
@@ -113,7 +117,7 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
                   <div className="dropdown-content">
                     <a onClick={onOpenLogin}>Iniciar sesión</a>
                     <a onClick={onOpenRegister}>Registrarse</a>
-                    <a href="#">Cerrar sesión</a>
+                    <a onClick={() => signOut()}>Cerrar sesión</a>
                   </div>
                 )}
               </div>
@@ -207,7 +211,7 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
                   <div className="dropdown-content">
                     <a onClick={onOpenLogin}>Iniciar sesión</a>
                     <a onClick={onOpenRegister}>Registrarse</a>
-                    <a href="#">Cerrar sesión</a>
+                    <a onClick={() => signOut()}>Cerrar sesión</a>
                   </div>
                 )}
               </div>

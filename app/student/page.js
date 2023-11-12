@@ -6,7 +6,6 @@ import { fetcher } from "@/sources/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-// import { } from 'next-'
 
 import useSWR from "swr";
 

@@ -274,12 +274,7 @@ const Home = () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-6s">
-                <Image
-                  src=""
-                  alt="UManizales"
-                  height={500}
-                  width={500}
-                />
+                <Image src="" alt="UManizales" height={500} width={500} />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
                     <i className="fas fa-link" />

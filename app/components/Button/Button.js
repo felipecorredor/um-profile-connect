@@ -1,20 +1,29 @@
+"use client";
+
 import React from "react";
-import "./button.css";
+import { Button, Icon } from "./button.css";
 
-const Button = ({ label, onClick, disabled, outline, small, icon }) => {
-  const buttonClasses = [
-    "button",
-    disabled ? "disabled" : "",
-    outline ? "outline" : "filled",
-    small ? "small" : "large",
-  ].join(" ");
-
+const CustomButton = ({
+  label,
+  onClick,
+  disabled,
+  outline,
+  small,
+  icon,
+  ...rest
+}) => {
   return (
-    <button disabled={disabled} onClick={onClick} className={buttonClasses}>
-      {icon}
+    <Button
+      disabled={disabled}
+      onClick={onClick}
+      outline={outline}
+      small={small}
+      {...rest}
+    >
+      {icon && <Icon>{icon}</Icon>}
       {label}
-    </button>
+    </Button>
   );
 };
 
-export default Button;
+export default CustomButton;

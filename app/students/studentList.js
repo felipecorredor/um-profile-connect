@@ -28,11 +28,20 @@ const StudentList = () => {
   }
 
   return (
-    <div className="row">
-      {students.map((student) => (
-        <StudentCard student={student} key={student.id} />
-      ))}
-    </div>
+    <>
+      <div className="shop-shorter mb-40 wow fadeInUp delay-0-2s">
+        <div className="sort-text">
+          <b>{students.length}</b> perfiles asombrosos esperando para ser
+          descubiertos. ¡Nuestra comunidad de estudiantes está llena de talento
+          y diversidad! 🌟
+        </div>
+      </div>
+      <div className="row">
+        {students.map((student) => (
+          <StudentCard student={student} key={student.id} />
+        ))}
+      </div>
+    </>
   );
 };
 

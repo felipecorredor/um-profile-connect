@@ -3,6 +3,7 @@ import ClientOnly from "@/app/components/ClientOnly";
 import ToasterProvider from "./providers/ToasterProvider";
 import LoginModal from "./components/modals/LoginModal/LoginModal";
 import RegisterModal from "./components/modals/RegisterModal/RegisterModal";
+import getCurrentUser from "./actions/getCurrentUser";
 
 export const metadata = {
   title: "Create Next App",

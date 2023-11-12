@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 
 import BasicForm from "../basic";
 import { FormProvider, useForm } from "react-hook-form";
@@ -74,6 +74,13 @@ const CreateStudent = () => {
   const setCustomValue = (id, value) => {
     methods.setValue(id, value);
   };
+
+  useEffect(() => {
+    setCustomValue(
+      "imageSrc",
+      "https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_1280.jpg"
+    );
+  }, []);
 
   const onSubmit = (data) => {
     if (!data?.imageSrc) {

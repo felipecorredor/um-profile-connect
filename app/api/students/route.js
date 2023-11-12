@@ -2,9 +2,19 @@ import { NextResponse } from "next/server";
 
 import prisma from "@/app/libs/prismadb";
 import { generateRandomString } from "@/sources/utils";
+import getCurrentUser from "@/app/actions/getCurrentUser";
 
 export async function POST(request) {
   const body = await request.json();
+
+  const currentUser = await getCurrentUser();
+
+  console.log("currentUser::", currentUser);
+
+  if (!currentUser) {
+    return NextResponse.error();
+  }
+
   const {
     description,
     educations,
@@ -20,7 +30,7 @@ export async function POST(request) {
 
   const student = await prisma.student.create({
     data: {
-      userId: generateRandomString(),
+      userId: currentUser.id,
       description,
       educations,
       email,
