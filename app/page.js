@@ -227,7 +227,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-3s">
                 <Image
-                  src="/assets/images/universidad/img3.jpeg"
+                  src="/assets/images/universidad/img10.jpg"
                   alt="UManizales"
                   height={500}
                   width={500}
@@ -243,7 +243,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-4s">
                 <Image
-                  src="/assets/images/universidad/img6.jpeg"
+                  src="/assets/images/universidad/img12.jpg"
                   alt="UManizles"
                   height={500}
                   width={500}
@@ -259,7 +259,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-5s">
                 <Image
-                  src="/assets/images/universidad/img5.jpg"
+                  src="/assets/images/universidad/img13.jpg"
                   alt="UManizales"
                   height={500}
                   width={500}
@@ -275,7 +275,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-6s">
                 <Image
-                  src="/assets/images/universidad/img13.jpg"
+                  src=""
                   alt="UManizales"
                   height={500}
                   width={500}
