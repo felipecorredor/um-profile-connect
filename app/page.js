@@ -44,7 +44,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <span className="bg-text">coach</span>
+        <span className="bg-text">UNIVERSIDAD</span>
       </section>
       {/* Hero Section End */}
       {/* Features Section Start */}
@@ -275,7 +275,7 @@ const Home = () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-6s">
                 <Image
-                  src=""
+                  src="/assets/images/universidad/img14.jpg"
                   alt="UManizales"
                   height={500}
                   width={500}

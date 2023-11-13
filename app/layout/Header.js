@@ -4,6 +4,7 @@ import MobileHeader from "./MobileHeader";
 import { stickyNav } from "@/sources/utils";
 import useLoginModal from "../hooks/useLoginModal";
 import useRegisterModal from "../hooks/useRegisterModal";
+import Image from "next/image";
 
 const Header = ({ header }) => {
   useEffect(() => {
@@ -49,8 +50,8 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
               <div className="logo-outer d-lg-flex align-items-center">
                 <div className="logo">
                   <Link href="/">
-                    <img
-                      src="assets/images/logos/logo.png"
+                    <Image width={110} height={80}
+                      src="assets/images/universidad/Logo-UManizales-blanco.svg"
                       alt="Logo"
                       title="Logo"
                     />
@@ -63,11 +64,11 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
                   <div className="navbar-header">
                     <div className="mobile-logo bg-green br-10 p-15">
                       <Link href="/">
-                        <img
-                          src="assets/images/logos/logo.png"
-                          alt="Logo"
-                          title="Logo"
-                        />
+                      <Image width={110} height={80}
+                      src="assets/images/universidad/Logo-UManizales-blanco.svg"
+                      alt="Logo"
+                      title="Logo"
+                    />
                       </Link>
                     </div>
                     {/* Toggle Button */}
@@ -142,8 +143,8 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
               <div className="logo-outer d-lg-flex align-items-center">
                 <div className="logo">
                   <Link href="/">
-                    <img
-                      src="assets/images/logos/logo.png"
+                  <Image width={110} height={80}
+                      src="assets/images/universidad/Logo-UManizales-blanco.svg"
                       alt="Logo"
                       title="Logo"
                     />

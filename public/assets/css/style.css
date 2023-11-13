@@ -417,7 +417,7 @@ input[type="radio"] {
 .bg-text {
   text-transform: uppercase;
   position: absolute;
-  font-size: 355px;
+  font-size: 235px;
   font-weight: 800;
   line-height: 0.7;
   opacity: 0.04;
@@ -3802,7 +3802,7 @@ h6,
   -webkit-box-flex: 0;
   -ms-flex: none;
   flex: none;
-  padding: 25px 50px;
+  padding: 20px 30px;
   position: relative;
   border-radius: 12px;
   margin-top: -26px;

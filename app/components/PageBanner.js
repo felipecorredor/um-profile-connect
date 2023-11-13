@@ -5,7 +5,7 @@ const PageBanner = ({ pageTitle, pageName }) => {
   return (
     <section
       className="page-banner-area rel z-1 text-white text-center"
-      style={{ backgroundImage: "url(assets/images/banner.jpg)" }}
+      style={{ backgroundImage: "url(assets/images/universidad/banner.jpg)" }}
     >
       <div className="container">
         <div className="banner-inner rpt-10">
