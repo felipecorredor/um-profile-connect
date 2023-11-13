@@ -1,3 +1,5 @@
+import prisma from "@/app/libs/prismadb";
+
 export default async function getStudents(numberElements = 1) {
   try {
     const students = await prisma.student.findMany({
