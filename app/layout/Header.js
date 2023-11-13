@@ -8,7 +8,7 @@ import useLoginModal from "../hooks/useLoginModal";
 import useRegisterModal from "../hooks/useRegisterModal";
 import { signOut } from "next-auth/react";
 
-const Header = ({ header }) => {
+const Header = ({ header, currentUser }) => {
   useEffect(() => {
     stickyNav();
   }, []);
@@ -26,6 +26,7 @@ const Header = ({ header }) => {
           setNavToggle={setNavToggle}
           onOpenRegister={registerModal.onOpen}
           onOpenLogin={loginModal.onOpen}
+          hasSession={currentUser}
         />
       );
 
@@ -36,12 +37,21 @@ const Header = ({ header }) => {
           setNavToggle={setNavToggle}
           onOpenRegister={registerModal.onOpen}
           onOpenLogin={loginModal.onOpen}
+          hasSession={currentUser}
         />
       );
   }
 };
+
 export default Header;
-const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
+
+const Header1 = ({
+    navToggle,
+    setNavToggle,
+    onOpenRegister,
+    onOpenLogin,
+    hasSession,
+  }) => (
     <Fragment>
       <header className="main-header">
         {/* Header-Top */}
@@ -115,9 +125,14 @@ const Header1 = ({ navToggle, setNavToggle, onOpenRegister, onOpenLogin }) => (
                 </div>
                 {navToggle && (
                   <div className="dropdown-content">
-                    <a onClick={onOpenLogin}>Iniciar sesión</a>
-                    <a onClick={onOpenRegister}>Registrarse</a>
-                    <a onClick={() => signOut()}>Cerrar sesión</a>
+                    {hasSession ? (
+                      <a onClick={() => signOut()}>Cerrar sesión</a>
+                    ) : (
+                      <>
+                        <a onClick={onOpenLogin}>Iniciar sesión</a>
+                        <a onClick={onOpenRegister}>Registrarse</a>
+                      </>
+                    )}
                   </div>
                 )}
               </div>

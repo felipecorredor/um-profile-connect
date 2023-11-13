@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Layout from "./layout/Layout";
 import Index1WorkStepSlider from "./components/slider/Index1WorkStepSlider";
 import Image from "next/image";
+import getCurrentUser from "./actions/getCurrentUser";
 
 const Index1Isotope = dynamic(
   () => import("@/app/components/isotope/Index1Isotope"),
@@ -13,9 +14,11 @@ const Index1Isotope = dynamic(
   }
 );
 
-const Home = () => {
+const Home = async () => {
+  const currentUser = await getCurrentUser();
+
   return (
-    <Layout header={1} footer={1}>
+    <Layout header={1} footer={1} currentUser={currentUser}>
       <section className="hero-section rel z-1 pt-150 rpt-135 pb-75 rpb-100">
         <div className="container">
           <div className="row align-items-center">

@@ -8,7 +8,7 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { animation } from "@/sources/utils";
 
-const Layout = ({ children, header, footer }) => {
+const Layout = ({ children, header, footer, currentUser }) => {
   useEffect(() => {
     animation();
 
@@ -28,7 +28,7 @@ const Layout = ({ children, header, footer }) => {
         {/* Preloader */}
         {loading && <div className="preloader" />}
         {/* main header */}
-        <Header header={header} />
+        <Header header={header} currentUser={currentUser} />
         {/*Form Back Drop*/}
         <Sidebar />
         {/*End Hidden Sidebar */}
