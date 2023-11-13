@@ -75,7 +75,7 @@ const CourseDetails = () => {
                     </li>
                     <li>
                       <i className="fas fa-globe" /> <span>Language</span>{" "}
-                      <b>English</b>
+                      <b>Spanish</b>
                     </li>
                   </ul>
                   <p>
