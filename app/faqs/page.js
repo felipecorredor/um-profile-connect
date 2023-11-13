@@ -3,7 +3,7 @@
 import { Accordion, Nav, Tab } from "react-bootstrap";
 
 import Layout from "../layout/Layout";
-import FaqCard from "../components/faqs/FaqCard";
+import FaqCard from "../components/faqs/faqCard";
 import PageBanner from "../components/PageBanner";
 
 const FaqCards = () => {

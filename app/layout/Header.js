@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { stickyNav } from "@/sources/utils";
 import useLoginModal from "../hooks/useLoginModal";
 import useRegisterModal from "../hooks/useRegisterModal";
-import Header1 from "../components/layout/Header1";
+import Header1 from "../components/layout/header1";
 import DefaultHeader from "../components/layout/DefaultHeader";
 
 const Header = ({ header, currentUser }) => {
