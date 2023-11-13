@@ -47,8 +47,11 @@ export async function POST(request) {
   return NextResponse.json({ student });
 }
 
-export async function GET() {
-  const students = await prisma.student.findMany();
+export async function GET(params) {
+  console.log("params:::", params);
+  const students = await prisma.student.findMany({
+    take: 1,
+  });
 
   return NextResponse.json({ students });
 }

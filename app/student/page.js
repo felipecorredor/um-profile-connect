@@ -33,8 +33,6 @@ const StudentPage = () => {
     return <div className="preloading" />;
   }
 
-  console.log("student::", student);
-
   return (
     <Layout>
       <PageBanner pageName={"Detalle del estudiante"} />

@@ -6,7 +6,7 @@ import Menus from "./Menus";
 import MobileHeader from "./MobileHeader";
 import { signOut } from "next-auth/react";
 
-const Header1 = ({
+const DefaultHeader = ({
   navToggle,
   setNavToggle,
   onOpenRegister,
@@ -14,7 +14,7 @@ const Header1 = ({
   hasSession,
 }) => (
   <Fragment>
-    <header className="main-header">
+    <header className="main-header header-two">
       {/* Header-Top */}
       <HeaderTop />
       {/* Header-Upper */}
@@ -41,11 +41,10 @@ const Header1 = ({
                   <div className="mobile-logo bg-green br-10 p-15">
                     <Link href="/">
                       <Image
-                        width={110}
-                        height={80}
-                        src="assets/images/universidad/Logo-UManizales-blanco.svg"
+                        src="/assets/images/logos/logo.png"
                         alt="Logo"
                         title="Logo"
+                        fill
                       />
                     </Link>
                   </div>
@@ -55,6 +54,7 @@ const Header1 = ({
                     className="navbar-toggle"
                     data-toggle="collapse"
                     data-target=".navbar-collapse"
+                    onClick={() => setNavToggle(!navToggle)}
                   >
                     <span className="icon-bar" />
                     <span className="icon-bar" />
@@ -82,7 +82,7 @@ const Header1 = ({
               </button>
               {/* menu sidbar */}
               <div className="menu-sidebar">
-                <button id="dropdown-item-button" title="Dropdown button">
+                <button>
                   <span className="icon-bar" />
                   <span className="icon-bar" />
                   <span className="icon-bar" />
@@ -109,5 +109,4 @@ const Header1 = ({
     </header>
   </Fragment>
 );
-
-export default Header1;
+export default DefaultHeader;

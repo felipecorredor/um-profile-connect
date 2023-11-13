@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
-import InputText from "../inputs/input-text";
+import InputText from "../inputs/InputText";
 import { Form } from "react-bootstrap";
 
 const BasicForm = () => {

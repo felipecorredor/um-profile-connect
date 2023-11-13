@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { signIn } from "next-auth/react";
-
 import CustomButton from "../../Button/Button";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import useLoginModal from "@/app/hooks/useLoginModal";
@@ -13,8 +12,8 @@ const FooterContent = () => {
   const loginModal = useLoginModal();
 
   const onToggle = () => {
-    registerModal.onClose();
-    loginModal.onOpen();
+    loginModal.onClose();
+    registerModal.onOpen();
   };
 
   return (
@@ -22,7 +21,7 @@ const FooterContent = () => {
       <CustomButton
         label="Continuar con Google"
         variant="primary"
-        icon={<i class="fab fa-google"></i>}
+        icon={<i class="fa-brands fa-google" />}
         outline
         onClick={() => signIn("google")}
       />
@@ -30,14 +29,14 @@ const FooterContent = () => {
       <CustomButton
         label="Continuar con Github"
         variant="primary"
-        icon={<i class="fab fa-github"></i>}
+        icon={<i class="fa-brands fa-google" />}
         outline
         onClick={() => signIn("github")}
       />
 
       <Container>
-        <Text>Ya tienes una cuenta?</Text>
-        <Link onClick={onToggle}>Iniciar sesión</Link>
+        <Text>Primera vez usando Profile Connect?</Text>
+        <Link onClick={onToggle}>Crea una cuenta</Link>
       </Container>
     </Wrapper>
   );
@@ -68,4 +67,5 @@ const Link = styled.span`
     text-decoration: underline;
   }
 `;
+
 export default FooterContent;

@@ -9,7 +9,7 @@ import ExperienceForm from "../experience";
 import toast from "react-hot-toast";
 import axios from "axios";
 import EducationForm from "../education";
-import ImageUpload from "../../inputs/image-upload";
+import ImageUpload from "../../inputs/ImageUpload";
 import { useRouter } from "next/navigation";
 import { isNotEmptyObject } from "@/sources/utils";
 

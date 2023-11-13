@@ -4,9 +4,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const StudentCard = ({ student }) => {
+const StudentCard = ({ student, className = "col-md-6 item" }) => {
   return (
-    <div className="col-md-6">
+    <div className={className}>
       <div className="coach-item wow fadeInUp delay-0-4s">
         <div className="coach-image">
           <span className="category">UM</span>

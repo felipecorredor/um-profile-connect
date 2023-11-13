@@ -5,6 +5,7 @@ import CustomModal from "../Modal";
 
 import BodyContent from "./BodyContent";
 import useLoginModal from "@/app/hooks/useLoginModal";
+import FooterContent from "./FooterContent";
 
 const LoginModal = () => {
   const loginModal = useLoginModal();
@@ -17,6 +18,7 @@ const LoginModal = () => {
         title="Iniciar Sesión"
         subtitle="Register Here"
         body={<BodyContent />}
+        footer={<FooterContent />}
       />
     </div>
   );

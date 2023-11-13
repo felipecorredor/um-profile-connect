@@ -49,6 +49,4 @@ export const Button = styled.button`
 
 export const Icon = styled.div`
   position: absolute;
-  left: 0.75rem;
-  top: 0.5rem;
 `;

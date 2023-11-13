@@ -4,9 +4,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { signIn } from "next-auth/react";
+import styled from "styled-components";
 
 const BodyContent = () => {
-  const { handleSubmit, register } = useForm();
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = (data) => {
     signIn("credentials", {
@@ -25,35 +30,49 @@ const BodyContent = () => {
 
   return (
     <div className="appointment-form">
-      <form onSubmit={handleSubmit(onSubmit)} method="post" action="#">
+      <form onSubmit={handleSubmit(onSubmit)} autocomplete="off">
         <div className="form-group">
           <input
-            {...register("email", { required: true })}
+            {...register("email", { required: "El email es requerido" })}
             type="email"
             name="email"
             defaultValue=""
             placeholder="Email"
             required=""
           />
+          <span className="form-error">
+            {errors.email && errors.email.message}
+          </span>
         </div>
+
         <div className="form-group">
           <input
-            {...register("password", { required: true })}
+            {...register("password", {
+              required: "La contraseña es requerida",
+            })}
             type="password"
             name="password"
             defaultValue=""
             placeholder="Password"
             required=""
           />
+          <span className="form-error">
+            {errors.password && errors.password.message}
+          </span>
         </div>
 
         <div className="form-group">
-          <button type="submit" className="theme-btn">
-            Submit now
-          </button>
+          <Button type="submit" className="theme-btn">
+            Iniciar sesión
+          </Button>
         </div>
       </form>
     </div>
   );
 };
+
+const Button = styled.button`
+  width: 100%;
+`;
+
 export default BodyContent;

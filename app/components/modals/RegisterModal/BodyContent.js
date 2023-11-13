@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import axios from "axios";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import styled from "styled-components";
 
 const BodyContent = () => {
   const { handleSubmit, register } = useForm();
@@ -42,7 +43,7 @@ const BodyContent = () => {
             type="text"
             name="name"
             defaultValue=""
-            placeholder="Complete Name"
+            placeholder="Nombre completo"
             required=""
           />
         </div>
@@ -53,7 +54,7 @@ const BodyContent = () => {
             type="email"
             name="email"
             defaultValue=""
-            placeholder="Email"
+            placeholder="Correo electrónico"
             required=""
           />
         </div>
@@ -63,19 +64,23 @@ const BodyContent = () => {
             type="password"
             name="password"
             defaultValue=""
-            placeholder="Password"
+            placeholder="Contraseña"
             required=""
           />
         </div>
 
         <div className="form-group">
-          <button type="submit" className="theme-btn">
-            Submit now
-          </button>
+          <Button type="submit" className="theme-btn">
+            Registrarse
+          </Button>
         </div>
       </form>
     </div>
   );
 };
+
+const Button = styled.button`
+  width: 100%;
+`;
 
 export default BodyContent;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { Blog, Courses, Home, Pages } from "./Menu";
+import { Blog, Courses, Home, Pages } from "../../layout/Menu";
 
 const MobileHeader = () => {
   const [activeMenu, setActiveMenu] = useState("");
