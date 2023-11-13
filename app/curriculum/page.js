@@ -2,10 +2,13 @@ import Link from "next/link";
 import Layout from "../layout/Layout";
 import PageBanner from "../components/PageBanner";
 import CreateStudent from "../components/students/create";
+import getCurrentUser from "../actions/getCurrentUser";
 
-const CourseDetails = () => {
+const CourseDetails = async () => {
+  const currentUser = await getCurrentUser();
+
   return (
-    <Layout>
+    <Layout currentUser={currentUser}>
       <PageBanner pageName={"Crear Perfil"} />
       <section className="course-details-area pt-130 rpt-100">
         <div className="container">

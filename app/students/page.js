@@ -6,10 +6,12 @@ import Pagination from "@/sources/Pagination";
 import StudentList from "./studentList";
 import { Suspense } from "react";
 import Loading from "../loading";
+import getCurrentUser from "../actions/getCurrentUser";
 
 const StudentListPage = async () => {
+  const currentUser = await getCurrentUser();
   return (
-    <Layout>
+    <Layout currentUser={currentUser}>
       <PageBanner pageName={"Students"} />
       <section className="course-left-area py-130 rpy-100">
         <div className="container">

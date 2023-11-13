@@ -7,16 +7,18 @@ import axios from "axios";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import styled from "styled-components";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
 
 const BodyContent = () => {
   const { handleSubmit, register } = useForm();
   const router = useRouter();
 
-  const onSubmit = (data) => {
+  const registerModal = useRegisterModal();
+
+  const onSubmit = data => {
     axios
       .post("/api/register", data)
       .then(async () => {
-        toast.success("Registrado");
         try {
           await signIn("credentials", {
             email: data.email,
@@ -24,12 +26,14 @@ const BodyContent = () => {
             redirect: false,
           });
 
-          router.push("/");
+          toast.success("Registro exitoso");
+          registerModal.onClose();
+          router.refresh();
         } catch (error) {
-          toast.error("Fallo al iniciar sesión");
+          toast.error("Fallo al registrarse, por favor intente de nuevo");
         }
       })
-      .catch((error) => {
+      .catch(error => {
         toast.error(error.message);
       });
   };
