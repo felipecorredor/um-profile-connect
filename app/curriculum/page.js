@@ -81,9 +81,7 @@ const CourseDetails = () => {
                   <p>
                     Sit amet consectetur adipiscin sed eiusmod tempor incidide
                   </p>
-                  <Link href="/contact" className="theme-btn">
-                    add to cart <i className="fas fa-arrow-right" />
-                  </Link>
+
                   <div className="social-style-two d-flex">
                     <Link href="/contact">
                       <i className="fab fa-twitter" />
