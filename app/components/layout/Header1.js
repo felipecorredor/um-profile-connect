@@ -5,6 +5,8 @@ import Image from "next/image";
 import Menus from "./Menus";
 import MobileHeader from "./MobileHeader";
 import { signOut } from "next-auth/react";
+import imgLogo from "../../../public/assets/images/universidad/Logo-UManizales-blanco.svg";
+
 
 const Header1 = ({
   navToggle,
@@ -25,9 +27,9 @@ const Header1 = ({
               <div className="logo">
                 <Link href="/">
                   <Image
-                    width={110}
-                    height={80}
-                    src="assets/images/universidad/Logo-UManizales-blanco.svg"
+                   width={110}
+                   height={80} 
+                    src={imgLogo}
                     alt="Logo"
                     title="Logo"
                   />
@@ -43,7 +45,7 @@ const Header1 = ({
                       <Image
                         width={110}
                         height={80}
-                        src="assets/images/universidad/Logo-UManizales-blanco.svg"
+                        src={imgLogo}
                         alt="Logo"
                         title="Logo"
                       />

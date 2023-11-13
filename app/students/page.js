@@ -10,7 +10,7 @@ import Loading from "../loading";
 const StudentListPage = async () => {
   return (
     <Layout>
-      <PageBanner pageName={"Students"} />
+      <PageBanner pageName={"Estudiantes"} />
       <section className="course-left-area py-130 rpy-100">
         <div className="container">
           <div className="row large-gap">

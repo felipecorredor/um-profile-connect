@@ -6,6 +6,20 @@ import Layout from "./layout/Layout";
 import Index1WorkStepSlider from "./components/slider/Index1WorkStepSlider";
 import Image from "next/image";
 import getCurrentUser from "./actions/getCurrentUser";
+import imgMan from "../public/assets/images/about/man.png"
+import imgHeroRight from "../public/assets/images/hero/hero-right.png"
+import imgIcon1 from "../public/assets/images/features/icon1.png"
+import imgIcon2 from "../public/assets/images/features/icon2.png"
+import imgUniversity1 from "../public/assets/images/universidad/img7.jpeg"
+import imgUniversity2 from "../public/assets/images/universidad/img9.jpg"
+import imgUniversity3 from "../public/assets/images/universidad/img10.jpg"
+import imgUniversity4 from "../public/assets/images/universidad/img12.jpg"
+import imgUniversity5 from "../public/assets/images/universidad/img13.jpg"
+import imgUniversity6 from "../public/assets/images/universidad/img14.jpg"
+import imgRectangle from "../public/assets/images/shapes/rectangle-dots.png"
+import imgCircle from "../public/assets/images/shapes/circle-dots.png"
+
+
 
 const Index1Isotope = dynamic(
   () => import("@/app/components/isotope/Index1Isotope"),
@@ -22,7 +36,7 @@ const Home = async () => {
       <section className="hero-section rel z-1 pt-150 rpt-135 pb-75 rpb-100">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-7">
+            <div className="col-lg-6">
               <div className="hero-content rpt-25 rmb-75">
                 <h1 className="mb-20 wow fadeInUp delay-0-4s">
                   Descubre Futuros Profesionales
@@ -40,9 +54,9 @@ const Home = async () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-5">
+            <div className="col-lg-6">
               <div className="hero-right-images text-lg-right wow fadeInUp delay-0-2s">
-                <img src="assets/images/hero/hero-right.png" alt="Hero" />
+                <Image src={imgHeroRight} alt="Hero" />
               </div>
             </div>
           </div>
@@ -57,7 +71,7 @@ const Home = async () => {
             <div className="col-lg-4 col-md-6">
               <div className="feature-item wow fadeInUp delay-0-2s">
                 <div className="image">
-                  <img src="assets/images/features/icon1.png" alt="Icon" />
+                  <Image src={imgIcon1} alt="Icon" />
                 </div>
                 <div className="content">
                   <h4>Explora el Talento Estudiantil</h4>
@@ -71,7 +85,7 @@ const Home = async () => {
             <div className="col-lg-4 col-md-6">
               <div className="feature-item wow fadeInUp delay-0-4s">
                 <div className="image">
-                  <img src="assets/images/features/icon2.png" alt="Icon" />
+                  <Image src={imgIcon2} alt="Icon" />
                 </div>
                 <div className="content">
                   <h4>Conoce Futuros Profesionales</h4>
@@ -85,7 +99,7 @@ const Home = async () => {
             <div className="col-lg-4 col-md-6">
               <div className="feature-item wow fadeInUp delay-0-6s">
                 <div className="image">
-                  <img src="assets/images/features/icon1.png" alt="Icon" />
+                  <Image src={imgIcon1} alt="Icon" />
                 </div>
                 <div className="content">
                   <h4>Perfiles Universitarios Destacados</h4>
@@ -98,14 +112,14 @@ const Home = async () => {
             </div>
           </div>
         </div>
-        <img
+        <Image
           className="rectangle-dots"
-          src="assets/images/shapes/rectangle-dots.png"
+          src={imgRectangle}
           alt="Shape"
         />
-        <img
+        <Image
           className="circle-dots"
-          src="assets/images/shapes/circle-dots.png"
+          src={imgCircle}
           alt="Shape"
         />
       </section>
@@ -116,7 +130,7 @@ const Home = async () => {
           <div className="row">
             <div className="col-lg-5 align-self-end">
               <div className="about-man rmb-75 wow fadeInLeft delay-0-2s">
-                <img src="assets/images/about/man.png" alt="Man" />
+                <Image src={imgMan} alt="Man" />
               </div>
             </div>
             <div className="col-lg-7">
@@ -197,11 +211,8 @@ const Home = async () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-1s">
                 <Image
-                  src="/assets/images/universidad/img7.jpeg"
+                  src={imgUniversity1}
                   alt="UManizales"
-                  height={500}
-                  width={500}
-                  // style={{ objectFit: "cover" }}
                 />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
@@ -214,10 +225,8 @@ const Home = async () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-2s">
                 <Image
-                  src="/assets/images/universidad/img9.jpg"
+                  src={imgUniversity2}
                   alt="UManizales"
-                  height={500}
-                  width={500}
                 />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
@@ -230,10 +239,8 @@ const Home = async () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-3s">
                 <Image
-                  src="/assets/images/universidad/img10.jpg"
+                  src={imgUniversity3}
                   alt="UManizales"
-                  height={500}
-                  width={500}
                 />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
@@ -246,10 +253,8 @@ const Home = async () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-4s">
                 <Image
-                  src="/assets/images/universidad/img12.jpg"
+                  src={imgUniversity4}
                   alt="UManizles"
-                  height={500}
-                  width={500}
                 />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
@@ -262,10 +267,8 @@ const Home = async () => {
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-5s">
                 <Image
-                  src="/assets/images/universidad/img13.jpg"
+                  src={imgUniversity5}
                   alt="UManizales"
-                  height={500}
-                  width={500}
                 />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
@@ -277,7 +280,7 @@ const Home = async () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-6s">
-                <Image src="" alt="UManizales" height={500} width={500} />
+                <Image src={imgUniversity6} alt="UManizales"/>
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
                     <i className="fas fa-link" />

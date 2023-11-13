@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import imgCircleOne from "../../public/assets/images/shapes/circle-one.png";
+import imgCircleTwo from "../../public/assets/images/shapes/circle-two.png";
 
 const PageBanner = ({ pageTitle, pageName }) => {
   return (
@@ -22,14 +24,14 @@ const PageBanner = ({ pageTitle, pageName }) => {
           </nav>
         </div>
       </div>
-      <img
+      <Image 
         className="circle-one"
-        src="assets/images/shapes/circle-one.png"
+        src={imgCircleOne}
         alt="Circle"
       />
-      <img
+      <Image 
         className="circle-two"
-        src="assets/images/shapes/circle-two.png"
+        src={imgCircleTwo}
         alt="Circle"
       />
     </section>
