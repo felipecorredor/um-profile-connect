@@ -2,10 +2,12 @@ import Link from "next/link";
 import Layout from "../layout/Layout";
 import PageBanner from "../components/PageBanner";
 import CreateStudent from "../components/students/create";
+import getStudentById from "../actions/getStudentById";
 import getCurrentUser from "../actions/getCurrentUser";
 
 const CourseDetails = async () => {
   const currentUser = await getCurrentUser();
+  const student = await getStudentById();
 
   return (
     <Layout currentUser={currentUser}>
@@ -36,7 +38,7 @@ const CourseDetails = async () => {
 
                 <section>
                   <h3>Información principal</h3>
-                  <CreateStudent />
+                  <CreateStudent student={student} />
                 </section>
               </div>
             </div>
