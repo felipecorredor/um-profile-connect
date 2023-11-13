@@ -7,6 +7,7 @@ import { stickyNav } from "@/sources/utils";
 import useLoginModal from "../hooks/useLoginModal";
 import useRegisterModal from "../hooks/useRegisterModal";
 import { signOut } from "next-auth/react";
+import Image from "next/image";
 
 const Header = ({ header, currentUser }) => {
   useEffect(() => {
@@ -63,8 +64,10 @@ const Header1 = ({
               <div className="logo-outer d-lg-flex align-items-center">
                 <div className="logo">
                   <Link href="/">
-                    <img
-                      src="assets/images/logos/logo.png"
+                    <Image
+                      width={110}
+                      height={80}
+                      src="assets/images/universidad/Logo-UManizales-blanco.svg"
                       alt="Logo"
                       title="Logo"
                     />
@@ -77,8 +80,10 @@ const Header1 = ({
                   <div className="navbar-header">
                     <div className="mobile-logo bg-green br-10 p-15">
                       <Link href="/">
-                        <img
-                          src="assets/images/logos/logo.png"
+                        <Image
+                          width={110}
+                          height={80}
+                          src="assets/images/universidad/Logo-UManizales-blanco.svg"
                           alt="Logo"
                           title="Logo"
                         />
@@ -161,8 +166,10 @@ const Header1 = ({
               <div className="logo-outer d-lg-flex align-items-center">
                 <div className="logo">
                   <Link href="/">
-                    <img
-                      src="assets/images/logos/logo.png"
+                    <Image
+                      width={110}
+                      height={80}
+                      src="assets/images/universidad/Logo-UManizales-blanco.svg"
                       alt="Logo"
                       title="Logo"
                     />

@@ -47,7 +47,7 @@ const Home = async () => {
             </div>
           </div>
         </div>
-        <span className="bg-text">coach</span>
+        <span className="bg-text">UNIVERSIDAD</span>
       </section>
       {/* Hero Section End */}
       {/* Features Section Start */}
