@@ -21,7 +21,7 @@ const FooterContent = () => {
       <CustomButton
         label="Continuar con Google"
         variant="primary"
-        icon={<i class="fa-brands fa-google" />}
+        icon={<i class="fab fa-google"></i>}
         outline
         onClick={() => signIn("google")}
       />
@@ -29,7 +29,7 @@ const FooterContent = () => {
       <CustomButton
         label="Continuar con Github"
         variant="primary"
-        icon={<i class="fa-brands fa-google" />}
+        icon={<i class="fab fa-github"></i>}
         outline
         onClick={() => signIn("github")}
       />

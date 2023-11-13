@@ -25,7 +25,7 @@ const Header = ({ header, currentUser }) => {
           setNavToggle={setNavToggle}
           onOpenRegister={registerModal.onOpen}
           onOpenLogin={loginModal.onOpen}
-          hasSession={currentUser}
+          currentUser={currentUser}
         />
       );
 
@@ -36,7 +36,7 @@ const Header = ({ header, currentUser }) => {
           setNavToggle={setNavToggle}
           onOpenRegister={registerModal.onOpen}
           onOpenLogin={loginModal.onOpen}
-          hasSession={currentUser}
+          currentUser={currentUser}
         />
       );
   }

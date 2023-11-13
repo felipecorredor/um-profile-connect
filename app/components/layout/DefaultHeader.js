@@ -11,7 +11,7 @@ const DefaultHeader = ({
   setNavToggle,
   onOpenRegister,
   onOpenLogin,
-  hasSession,
+  currentUser,
 }) => (
   <Fragment>
     <header className="main-header header-two">
@@ -66,7 +66,7 @@ const DefaultHeader = ({
                     navToggle ? "show" : ""
                   }`}
                 >
-                  <Menus />
+                  <Menus currentUser={currentUser} />
                   <MobileHeader />
                 </div>
               </nav>
@@ -90,7 +90,7 @@ const DefaultHeader = ({
               </div>
               {navToggle && (
                 <div className="dropdown-content">
-                  {hasSession ? (
+                  {currentUser ? (
                     <a onClick={() => signOut()}>Cerrar sesión</a>
                   ) : (
                     <>

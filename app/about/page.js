@@ -2,10 +2,13 @@ import Link from "next/link";
 import Layout from "../layout/Layout";
 import PageBanner from "../components/PageBanner";
 import Advertise from "../components/Advertise";
+import getCurrentUser from "../actions/getCurrentUser";
 
-const About = () => {
+const About = async () => {
+  const currentUser = await getCurrentUser();
+
   return (
-    <Layout>
+    <Layout currentUser={currentUser}>
       <PageBanner pageName={"Sobre nosotros"} />
       {/* Page Banner End */}
       {/* About Section Start */}

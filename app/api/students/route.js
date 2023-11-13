@@ -1,15 +1,12 @@
 import { NextResponse } from "next/server";
 
 import prisma from "@/app/libs/prismadb";
-import { generateRandomString } from "@/sources/utils";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 
 export async function POST(request) {
   const body = await request.json();
 
   const currentUser = await getCurrentUser();
-
-  console.log("currentUser::", currentUser);
 
   if (!currentUser) {
     return NextResponse.error();
@@ -47,11 +44,8 @@ export async function POST(request) {
   return NextResponse.json({ student });
 }
 
-export async function GET(params) {
-  console.log("params:::", params);
-  const students = await prisma.student.findMany({
-    take: 1,
-  });
+export async function GET() {
+  const students = await prisma.student.findMany();
 
   return NextResponse.json({ students });
 }
