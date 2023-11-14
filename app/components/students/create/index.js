@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 
 import BasicForm from "../basic";
 import { FormProvider, useForm } from "react-hook-form";
@@ -11,13 +11,12 @@ import EducationForm from "../education";
 import ImageUpload from "../../inputs/ImageUpload";
 
 import useStudent from "@/app/hooks/useStudent";
-import { DEFAULT_VALUES } from "@/global/defaultData";
 
 const CreateStudent = ({ student }) => {
   const hasStudent = useMemo(() => student, [student]);
 
   const methods = useForm({
-    defaultValues: student || DEFAULT_VALUES,
+    defaultValues: student,
   });
 
   const errors = methods.formState.errors;
@@ -27,13 +26,6 @@ const CreateStudent = ({ student }) => {
   const setCustomValue = (id, value) => {
     methods.setValue(id, value);
   };
-
-  useEffect(() => {
-    setCustomValue(
-      "imageSrc",
-      "https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_1280.jpg"
-    );
-  }, []);
 
   const onSubmit = (data) => {
     if (!data?.imageSrc) {

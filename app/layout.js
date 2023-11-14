@@ -3,7 +3,6 @@ import ClientOnly from "@/app/components/ClientOnly";
 import ToasterProvider from "./providers/ToasterProvider";
 import LoginModal from "./components/modals/LoginModal/LoginModal";
 import RegisterModal from "./components/modals/RegisterModal/RegisterModal";
-import getCurrentUser from "./actions/getCurrentUser";
 
 export const metadata = {
   title: "Profile Connect",
@@ -14,11 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link
-            rel="shortcut icon"
-            href="assets/images/favicon-32x32.png"
-            type="image/x-icon"
-          />
+        <link
+          rel="shortcut icon"
+          href="assets/images/favicon-32x32.png"
+          type="image/x-icon"
+        />
         {/*====== Google Fonts ======*/}
         <link
           href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap"
