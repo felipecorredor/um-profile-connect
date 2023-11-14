@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import FaqCard from "./faqCard";
+import FaqCard from "./FaqCard";
 
 import { Accordion, Nav, Tab } from "react-bootstrap";
 
