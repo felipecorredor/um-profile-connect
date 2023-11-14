@@ -1,7 +1,7 @@
 "use client";
 
 import PageBanner from "@/app/components/PageBanner";
-import Layout from "@/app/layout/Layout";
+
 import { fetcher } from "@/sources/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,7 +34,7 @@ const StudentPage = () => {
   }
 
   return (
-    <Layout>
+    <>
       <PageBanner pageName={"Detalle del estudiante"} />
       <section className="course-details-area pt-130 rpt-100">
         <div className="container">
@@ -42,17 +42,8 @@ const StudentPage = () => {
             <div className="col-lg-8">
               <div className="course-details-content">
                 <div className="course-header">
-                  <span className="category">Web Design</span>
+                  <span className="category">{student.position}</span>
                   <img src="assets/images/shapes/line-shape.png" alt="Line" />
-                  <span className="off">30% off</span>
-                  <div className="ratting">
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <span>(50)</span>
-                  </div>
                 </div>
                 <h2>
                   {student.firstName} {student.lastName}
@@ -65,11 +56,13 @@ const StudentPage = () => {
                       height={200}
                       width={200}
                     />
-                    <h6>Donald J. Miller</h6>
+                    <h6>
+                      {student.firstName} {student.lastName}
+                    </h6>
                   </li>
                   <li>
-                    <i className="fas fa-cloud-upload-alt" /> Last Update
-                    {student.createdAt}
+                    <i className="fas fa-cloud-upload-alt" /> Ultima
+                    actualización {student.createdAt}
                   </li>
                   <li>
                     <i className="far fa-user" /> 25 Enrolled
@@ -256,7 +249,7 @@ const StudentPage = () => {
         </div>
       </section>
       {/* Course Details End */}
-    </Layout>
+    </>
   );
 };
 export default StudentPage;
