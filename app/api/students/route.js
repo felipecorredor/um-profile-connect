@@ -37,7 +37,7 @@ export async function POST(request) {
       position,
       skills,
       imageSrc,
-      semester,
+      semester: Number(semester),
     },
   });
 

@@ -6,20 +6,18 @@ import Layout from "./layout/Layout";
 import Index1WorkStepSlider from "./components/slider/Index1WorkStepSlider";
 import Image from "next/image";
 import getCurrentUser from "./actions/getCurrentUser";
-import imgMan from "../public/assets/images/about/man.png"
-import imgHeroRight from "../public/assets/images/hero/hero-right.png"
-import imgIcon1 from "../public/assets/images/features/icon1.png"
-import imgIcon2 from "../public/assets/images/features/icon2.png"
-import imgUniversity1 from "../public/assets/images/universidad/img7.jpeg"
-import imgUniversity2 from "../public/assets/images/universidad/img9.jpg"
-import imgUniversity3 from "../public/assets/images/universidad/img10.jpg"
-import imgUniversity4 from "../public/assets/images/universidad/img12.jpg"
-import imgUniversity5 from "../public/assets/images/universidad/img13.jpg"
-import imgUniversity6 from "../public/assets/images/universidad/img14.jpg"
-import imgRectangle from "../public/assets/images/shapes/rectangle-dots.png"
-import imgCircle from "../public/assets/images/shapes/circle-dots.png"
-
-
+import imgMan from "../public/assets/images/about/man.png";
+import imgHeroRight from "../public/assets/images/hero/hero-right.png";
+import imgIcon1 from "../public/assets/images/features/icon1.png";
+import imgIcon2 from "../public/assets/images/features/icon2.png";
+import imgUniversity1 from "../public/assets/images/universidad/img7.jpeg";
+import imgUniversity2 from "../public/assets/images/universidad/img9.jpg";
+import imgUniversity3 from "../public/assets/images/universidad/img10.jpg";
+import imgUniversity4 from "../public/assets/images/universidad/img12.jpg";
+import imgUniversity5 from "../public/assets/images/universidad/img13.jpg";
+import imgUniversity6 from "../public/assets/images/universidad/img14.jpg";
+import imgRectangle from "../public/assets/images/shapes/rectangle-dots.png";
+import imgCircle from "../public/assets/images/shapes/circle-dots.png";
 
 const Index1Isotope = dynamic(
   () => import("@/app/components/isotope/Index1Isotope"),
@@ -112,16 +110,8 @@ const Home = async () => {
             </div>
           </div>
         </div>
-        <Image
-          className="rectangle-dots"
-          src={imgRectangle}
-          alt="Shape"
-        />
-        <Image
-          className="circle-dots"
-          src={imgCircle}
-          alt="Shape"
-        />
+        <Image className="rectangle-dots" src={imgRectangle} alt="Shape" />
+        <Image className="circle-dots" src={imgCircle} alt="Shape" />
       </section>
       {/* Features Section End */}
       {/* About Section Start */}
@@ -210,10 +200,7 @@ const Home = async () => {
           <div className="row small-gap justify-content-center">
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-1s">
-                <Image
-                  src={imgUniversity1}
-                  alt="UManizales"
-                />
+                <Image src={imgUniversity1} alt="UManizales" />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
                     <i className="fas fa-link" />
@@ -224,10 +211,7 @@ const Home = async () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-2s">
-                <Image
-                  src={imgUniversity2}
-                  alt="UManizales"
-                />
+                <Image src={imgUniversity2} alt="UManizales" />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
                     <i className="fas fa-link" />
@@ -238,10 +222,7 @@ const Home = async () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-3s">
-                <Image
-                  src={imgUniversity3}
-                  alt="UManizales"
-                />
+                <Image src={imgUniversity3} alt="UManizales" />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
                     <i className="fas fa-link" />
@@ -252,10 +233,7 @@ const Home = async () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-4s">
-                <Image
-                  src={imgUniversity4}
-                  alt="UManizles"
-                />
+                <Image src={imgUniversity4} alt="UManizles" />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
                     <i className="fas fa-link" />
@@ -266,10 +244,7 @@ const Home = async () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-5s">
-                <Image
-                  src={imgUniversity5}
-                  alt="UManizales"
-                />
+                <Image src={imgUniversity5} alt="UManizales" />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
                     <i className="fas fa-link" />
@@ -280,7 +255,7 @@ const Home = async () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-6s">
-                <Image src={imgUniversity6} alt="UManizales"/>
+                <Image src={imgUniversity6} alt="UManizales" />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
                     <i className="fas fa-link" />
