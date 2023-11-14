@@ -8,7 +8,7 @@ const Advertise = () => {
           <div className="content">
             <h4>Encuentra Tu Futuro Profesional</h4>
             <p>
-              En la Universidad Manizales, creemos en tu potencial.Regístrate
+              En la Universidad Manizales, creemos en tu potencial. Regístrate
               hoy y comienza tu viaje hacia una carrera exitosa.
             </p>
           </div>

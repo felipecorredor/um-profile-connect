@@ -4,10 +4,9 @@ import PageBanner from "../components/PageBanner";
 import Advertise from "../components/Advertise";
 import getCurrentUser from "../actions/getCurrentUser";
 import Image from "next/image";
-import imgAbout from "../../public/assets/images/about/about-page.png"
-import imgIcon7 from "../../public/assets/images/features/icon7.png"
-import imgIcon8 from "../../public/assets/images/features/icon8.png"
-
+import imgAbout from "../../public/assets/images/about/about-page.png";
+import imgIcon7 from "../../public/assets/images/features/icon7.png";
+import imgIcon8 from "../../public/assets/images/features/icon8.png";
 
 const About = async () => {
   const currentUser = await getCurrentUser();
@@ -36,6 +35,7 @@ const About = async () => {
                 <div className="about-btns pt-25">
                   <Link
                     className="theme-btn my-15"
+                    target="_blank"
                     href="https://umanizales.edu.co/"
                   >
                     Conoce Más <i className="fas fa-arrow-right" />

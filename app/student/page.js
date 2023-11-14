@@ -2,7 +2,7 @@
 
 import PageBanner from "@/app/components/PageBanner";
 
-import { fetcher } from "@/sources/utils";
+import { fetcher, formatDateTime } from "@/sources/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -34,6 +34,8 @@ const StudentPage = () => {
     return <div className="preloading" />;
   }
 
+  const createdAt = formatDateTime(student.createdAt);
+
   return (
     <>
       <PageBanner pageName={"Detalle del estudiante"} />
@@ -44,7 +46,12 @@ const StudentPage = () => {
               <div className="course-details-content">
                 <div className="course-header">
                   <span className="category">{student.position}</span>
-                  <img src="assets/images/shapes/line-shape.png" alt="Line" />
+                  <Image
+                    src="/assets/images/shapes/line-shape.png"
+                    alt="Line"
+                    height={60}
+                    width={60}
+                  />
                 </div>
                 <h2>
                   {student.firstName} {student.lastName}
@@ -62,11 +69,11 @@ const StudentPage = () => {
                     </h6>
                   </li>
                   <li>
-                    <i className="fas fa-cloud-upload-alt" /> Ultima
-                    actualización {student.createdAt}
+                    <i className="far fa-user" /> {student.semester} Semestre
                   </li>
                   <li>
-                    <i className="far fa-user" /> 25 Enrolled
+                    <i className="fas fa-cloud-upload-alt" /> Actualización:{" "}
+                    {createdAt}
                   </li>
                 </ul>
                 <div className="image mb-35">
@@ -133,14 +140,14 @@ const StudentPage = () => {
                 <div className="mt-45">
                   <h3>Detalles</h3>
                   <div className="course-instructor pt-10 pb-55 wow fadeInUp delay-0-2s">
-                    <div className="row align-items-center">
+                    <div className="row">
                       <div className="col-sm-5">
                         <div className="instructor-image">
                           <Image
                             src={student.imageSrc}
                             alt="estudiante Universidad de Manizales"
                             width={600}
-                            height={300}
+                            height={250}
                           />
                         </div>
                       </div>
@@ -152,29 +159,6 @@ const StudentPage = () => {
                           <span className="designations">
                             {student.position}
                           </span>
-
-                          <p>
-                            Sit amet consectet adipising elit sed do eiusmod
-                            incididunt ut labore et dolore magna. Lorem Ipsum es
-                            simplemente el texto de relleno de las imprentas y
-                            archivos de texto. Lorem Ipsum ha sido el texto de
-                            relleno estándar de las industrias desde el año 1500
-                          </p>
-                          <h5>Follow Me</h5>
-                          <div className="social-style-two">
-                            <Link href="/contact">
-                              <i className="fab fa-twitter" />
-                            </Link>
-                            <Link href="/contact">
-                              <i className="fab fa-facebook-f" />
-                            </Link>
-                            <Link href="/contact">
-                              <i className="fab fa-instagram" />
-                            </Link>
-                            <Link href="/contact">
-                              <i className="fab fa-pinterest-p" />
-                            </Link>
-                          </div>
                         </div>
                       </div>
                     </div>

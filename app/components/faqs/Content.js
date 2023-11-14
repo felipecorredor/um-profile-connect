@@ -3,19 +3,11 @@
 import React from "react";
 import FaqCard from "./FaqCard";
 
-import { Accordion, Nav, Tab } from "react-bootstrap";
+import { Accordion, Tab } from "react-bootstrap";
 
 const FaqsContent = () => {
   return (
     <Tab.Container defaultActiveKey={"tabContent1"}>
-      <Nav className="nav FaqCards-tab mb-40">
-        <li>
-          <Nav.Link eventKey={"tabContent1"} href="#tabContent1">
-            Preguntas
-          </Nav.Link>
-        </li>
-      </Nav>
-
       <Tab.Content className="tab-content faq-accordion">
         <Tab.Pane className="tab-pane fade" eventKey="tabContent1">
           <Accordion defaultActiveKey="a1">

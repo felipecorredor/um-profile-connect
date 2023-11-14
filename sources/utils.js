@@ -1,3 +1,5 @@
+import { monthNames } from "@/global/months";
+
 // Animation with wowjs
 export const animation = () => {
   if (typeof window !== "undefined") {
@@ -92,4 +94,30 @@ export const generateRandomString = () => {
 
 export const isNotEmptyObject = (obj) => {
   return Object.values(obj).length > 0;
+};
+
+export const formatDateTime = (currentDate) => {
+  // Array of abbreviated month names
+  const date = new Date(currentDate);
+
+  // Get date components
+  const day = date.getDate();
+  const month = monthNames[date.getMonth()];
+  const year = date.getFullYear();
+  let hours = date.getHours();
+  const minutes = date.getMinutes();
+
+  // Determine if it's AM or PM
+  const period = hours >= 12 ? "PM" : "AM";
+
+  // Convert hours to 12-hour format
+  hours = hours % 12 || 12;
+
+  // Ensure minutes have two digits
+  const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+
+  // Construct the formatted string
+  const formattedDateTime = `${month} ${day}, ${year} ${hours}:${formattedMinutes} ${period}`;
+
+  return formattedDateTime;
 };
