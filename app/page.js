@@ -6,7 +6,7 @@ import Layout from "./layout/Layout";
 import Index1WorkStepSlider from "./components/slider/Index1WorkStepSlider";
 import Image from "next/image";
 import getCurrentUser from "./actions/getCurrentUser";
-import imgMan from "../public/assets/images/about/man.png";
+import imgMan from "../public/assets/images/universidad/alumno2.webp";
 import imgHeroRight from "../public/assets/images/hero/hero-right.png";
 import imgIcon1 from "../public/assets/images/features/icon1.png";
 import imgIcon2 from "../public/assets/images/features/icon2.png";

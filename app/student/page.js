@@ -6,6 +6,7 @@ import { fetcher } from "@/sources/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import imgVideo from "/public/assets/images/universidad/video.jpg";
 
 import useSWR from "swr";
 
@@ -185,63 +186,57 @@ const StudentPage = () => {
               <div className="course-sidebar rmt-75">
                 <div className="widget widget-course-details wow fadeInUp delay-0-2s">
                   <div className="widget-video">
-                    <img
-                      src="assets/images/widgets/course-details.jpg"
+                    <Image
+                      width={312}
+                      height={175}
+                      src={imgVideo}
                       alt="Course Details"
                     />
                     <a
-                      href="https://www.youtube.com/watch?v=9Y7ma241N8k"
+                      href="https://www.youtube.com/watch?v=s_Ye8J7KGq8"
                       className="mfp-iframe youtube-video-play"
+                      target="_blank"
                     >
                       <i className="fas fa-play" />
                     </a>
                   </div>
                   <div className="price-off">
-                    <span className="price">259.83</span>
-                    <span className="off">25% off</span>
+                    <span className="price">
+                      Facultad de Ciencias e Ingenieria
+                    </span>
                   </div>
+                  <h6>Contamos con una amplia variedad de programa</h6>
                   <ul className="course-details-list mb-25">
                     <li>
-                      <i className="far fa-file-alt" />{" "}
-                      <span>Course Level</span> <b>Beginner</b>
+                      <Link
+                        href="https://umanizales.edu.co/oferta-academica/ingenieria-de-sistemas-y-telecomunicaciones"
+                        target="_blank"
+                      >
+                        <span>Ingeniería de sistemas y telecomunicaciones</span>
+                      </Link>
                     </li>
                     <li>
-                      <i className="far fa-clock" /> <span>Duration</span>{" "}
-                      <b>25.5 Hr</b>
+                      <Link href="https://umanizales.edu.co/oferta-academica/ingenieria-en-analitica-de-datos">
+                        <span>Ingeniería en analítica de datos</span>
+                      </Link>
                     </li>
                     <li>
-                      <i className="far fa-play-circle" /> <span>Lectures</span>{" "}
-                      <b>9 Lectures</b>
+                      <Link
+                        href="https://umanizales.edu.co/oferta-academica/ingenieria-en-seguridad-de-la-informacion"
+                        target="_blank"
+                      >
+                        <span>Ingeniería en seguridad de la información</span>
+                      </Link>
                     </li>
                     <li>
-                      <i className="far fa-clipboard" /> <span>Subject</span>{" "}
-                      <b>Web Design</b>
-                    </li>
-                    <li>
-                      <i className="fas fa-globe" /> <span>Language</span>{" "}
-                      <b>English</b>
+                      <Link
+                        href="https://umanizales.edu.co/oferta-academica/ingenieria-logistica"
+                        target="_blank"
+                      >
+                        <span>Ingeniería en logística</span>
+                      </Link>
                     </li>
                   </ul>
-                  <p>
-                    Sit amet consectetur adipiscin sed eiusmod tempor incidide
-                  </p>
-                  <Link className="theme-btn" href="/contact">
-                    add to cart <i className="fas fa-arrow-right" />
-                  </Link>
-                  <div className="social-style-two d-flex">
-                    <Link href="/contact">
-                      <i className="fab fa-twitter" />
-                    </Link>
-                    <Link href="/contact">
-                      <i className="fab fa-facebook-f" />
-                    </Link>
-                    <Link href="/contact">
-                      <i className="fab fa-instagram" />
-                    </Link>
-                    <Link href="/contact">
-                      <i className="fab fa-pinterest-p" />
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>
