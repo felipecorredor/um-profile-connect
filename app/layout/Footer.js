@@ -73,20 +73,9 @@ const FollowIcon = () => (
       </li>
     </Fragment>
   ),
-  FooterBottom = () => (
-    <Fragment>
-      <li>
-        <Link href="/faqs">Faqs</Link>
-      </li>
-      <li>
-        <Link href="/about">About</Link>
-      </li>
-    </Fragment>
-  ),
   CopyRight = () => (
     <p>
-      © {new Date().getFullYear()}. <Link href="/">Wellern</Link> All rights
-      reserved.
+      © {new Date().getFullYear()}. <Link href="https://umanizales.edu.co/" target="_blank">Universidad de Manizales</Link> Todos los derechos reservados.
     </p>
   ),
   Footer1 = ({ scrollTop }) => (
@@ -151,9 +140,6 @@ const FollowIcon = () => (
         <div className="container">
           <div className="copyright-inner">
             <CopyRight />
-            <ul className="footer-menu">
-              <FooterBottom />
-            </ul>
           </div>
         </div>
         {/* Scroll Top Button */}

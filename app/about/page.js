@@ -3,6 +3,11 @@ import Layout from "../layout/Layout";
 import PageBanner from "../components/PageBanner";
 import Advertise from "../components/Advertise";
 import getCurrentUser from "../actions/getCurrentUser";
+import Image from "next/image";
+import imgAbout from "../../public/assets/images/about/about-page.png"
+import imgIcon7 from "../../public/assets/images/features/icon7.png"
+import imgIcon8 from "../../public/assets/images/features/icon8.png"
+
 
 const About = async () => {
   const currentUser = await getCurrentUser();
@@ -40,7 +45,7 @@ const About = async () => {
             </div>
             <div className="col-lg-5">
               <div className="about-page-middle rpt-55 rpb-30 wow fadeInRight delay-0-2s">
-                <img src="assets/images/about/about-page.png" alt="About" />
+                <Image src={imgAbout} alt="About" />
                 <div className="circle-content">
                   <b>51</b>
                   <span>Años de experiencia</span>
@@ -76,7 +81,7 @@ const About = async () => {
             <div className="col-lg-3 col-sm-6">
               <div className="feature-three-item wow fadeInUp delay-0-4s">
                 <div className="icon">
-                  <img src="assets/images/features/icon7.png" alt="Icon" />
+                  <Image src={imgIcon7} alt="Icon" />
                 </div>
                 <h4>Reconocimientos y Alianzas Estratégicas</h4>
                 <p>
@@ -91,7 +96,7 @@ const About = async () => {
             <div className="col-lg-3 col-sm-6">
               <div className="feature-three-item wow fadeInUp delay-0-6s">
                 <div className="icon">
-                  <img src="assets/images/features/icon8.png" alt="Icon" />
+                  <Image src={imgIcon8} alt="Icon" />
                 </div>
                 <h4>Éxito de Nuestros Graduados</h4>
                 <p>

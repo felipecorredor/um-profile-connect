@@ -12,7 +12,7 @@ const StudentListPage = async () => {
   const currentUser = await getCurrentUser();
   return (
     <Layout currentUser={currentUser}>
-      <PageBanner pageName={"Students"} />
+      <PageBanner pageName="Estudiantes" />
       <section className="course-left-area py-130 rpy-100">
         <div className="container">
           <div className="row large-gap">
