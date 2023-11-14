@@ -6,7 +6,6 @@ import getStudentById from "../actions/getStudentById";
 import getCurrentUser from "../actions/getCurrentUser";
 import Image from "next/image";
 import imgLineShape from "/public/assets/images/shapes/line-shape.png";
-import imgCouseAuthor from "/public/assets/images/coachs/couse-author.jpg";
 import imgVideo from "/public/assets/images/universidad/video.jpg";
 
 const CourseDetails = async () => {
@@ -26,16 +25,6 @@ const CourseDetails = async () => {
                   <Image src={imgLineShape} alt="Line" />
                 </div>
                 <h2>Crea tu perfil</h2>
-                <ul className="author-date-enroll">
-                  <li>
-                    <Image src={imgCouseAuthor} alt="Authro" />
-                    <h6>Donald J. Miller</h6>
-                  </li>
-                  <li>
-                    <i className="fas fa-cloud-upload-alt" /> Last Update
-                    February 15, 2022
-                  </li>
-                </ul>
 
                 <section>
                   <h3>Información principal</h3>
