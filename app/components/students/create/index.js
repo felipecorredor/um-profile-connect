@@ -11,12 +11,13 @@ import EducationForm from "../education";
 import ImageUpload from "../../inputs/ImageUpload";
 
 import useStudent from "@/app/hooks/useStudent";
+import { DEFAULT_VALUES } from "@/global/defaultData";
 
 const CreateStudent = ({ student }) => {
   const hasStudent = useMemo(() => student, [student]);
 
   const methods = useForm({
-    defaultValues: student,
+    defaultValues: student || DEFAULT_VALUES,
   });
 
   const errors = methods.formState.errors;
@@ -34,7 +35,7 @@ const CreateStudent = ({ student }) => {
     );
   }, []);
 
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     if (!data?.imageSrc) {
       methods.setError("imageSrc", {
         type: "custom",
@@ -60,7 +61,7 @@ const CreateStudent = ({ student }) => {
         >
           <div className="image mb-35">
             <ImageUpload
-              onChange={value => setCustomValue("imageSrc", value)}
+              onChange={(value) => setCustomValue("imageSrc", value)}
               value={watchImageSrc}
             />
             {errors?.imageSrc && (

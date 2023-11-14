@@ -11,16 +11,14 @@ const Menus = ({ currentUser }) => (
     <li>
       <Link href="/faqs">Preguntas</Link>
     </li>
+    <li>
+      <Link href="/students">Estudiantes</Link>
+    </li>
 
     {currentUser && (
-      <>
-        <li>
-          <Link href="/students">Estudiantes</Link>
-        </li>
-        <li>
-          <Link href="/curriculum">Crear perfil</Link>
-        </li>
-      </>
+      <li>
+        <Link href="/curriculum">Crear perfil</Link>
+      </li>
     )}
   </ul>
 );
