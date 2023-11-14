@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <head>
       <link
             rel="shortcut icon"
-            href="assets/images/favicon-32x32.png"
+            href="assets/images/favicon.png"
             type="image/x-icon"
           />
         {/*====== Google Fonts ======*/}
