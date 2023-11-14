@@ -80,7 +80,7 @@ export async function PUT(request) {
       position,
       skills,
       imageSrc,
-      semester,
+      semester: Number(semester),
     },
   });
 

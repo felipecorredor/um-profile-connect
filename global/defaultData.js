@@ -1,4 +1,4 @@
-const DEFAULT_VALUES = {
+export const DEFAULT_VALUES = {
   firstName: "John",
   lastName: "Doe",
   email: "johndoe@example.com",
