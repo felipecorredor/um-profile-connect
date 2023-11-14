@@ -45,7 +45,7 @@ const Home = async () => {
                   sus excelentes habilidades y cualidades únicas!
                 </p>
                 <div className="hero-btn mt-30 wow fadeInUp delay-0-8s">
-                  <Link className="theme-btn" href="/course-grid">
+                  <Link className="theme-btn" href="/students">
                     Empieza a Contratar Talentos{" "}
                     <i className="fas fa-arrow-right" />
                   </Link>
