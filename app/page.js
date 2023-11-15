@@ -54,7 +54,7 @@ const Home = async () => {
             </div>
             <div className="col-lg-6">
               <div className="hero-right-images text-lg-right wow fadeInUp delay-0-2s">
-                <Image src={imgHeroRight} alt="Hero" />
+                <Image src={imgHeroRight} alt="Hero" class="imgHero"/>
               </div>
             </div>
           </div>
