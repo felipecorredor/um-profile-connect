@@ -10,12 +10,12 @@ import imgMan from "../public/assets/images/universidad/alumno2.webp";
 import imgHeroRight from "../public/assets/images/hero/hero-right.png";
 import imgIcon1 from "../public/assets/images/features/icon1.png";
 import imgIcon2 from "../public/assets/images/features/icon2.png";
-import imgUniversity1 from "../public/assets/images/universidad/img7.jpeg";
-import imgUniversity2 from "../public/assets/images/universidad/img9.jpg";
-import imgUniversity3 from "../public/assets/images/universidad/img10.jpg";
-import imgUniversity4 from "../public/assets/images/universidad/img12.jpg";
-import imgUniversity5 from "../public/assets/images/universidad/img13.jpg";
-import imgUniversity6 from "../public/assets/images/universidad/img14.jpg";
+import imgUniversity1 from "../public/assets/images/universidad/img7.webp";
+import imgUniversity2 from "../public/assets/images/universidad/img9.webp";
+import imgUniversity3 from "../public/assets/images/universidad/img10.webp";
+import imgUniversity4 from "../public/assets/images/universidad/img12.webp";
+import imgUniversity5 from "../public/assets/images/universidad/img13.webp";
+import imgUniversity6 from "../public/assets/images/universidad/img14.webp";
 import imgRectangle from "../public/assets/images/shapes/rectangle-dots.png";
 import imgCircle from "../public/assets/images/shapes/circle-dots.png";
 
@@ -54,7 +54,7 @@ const Home = async () => {
             </div>
             <div className="col-lg-6">
               <div className="hero-right-images text-lg-right wow fadeInUp delay-0-2s">
-                <Image src={imgHeroRight} alt="Hero" />
+                <Image src={imgHeroRight} alt="Hero" class="imgHero"/>
               </div>
             </div>
           </div>
@@ -244,7 +244,7 @@ const Home = async () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
               <div className="instagram-item wow fadeInUp delay-0-5s">
-                <Image src={imgUniversity5} alt="UManizales" />
+              <Image src={imgUniversity5} alt="UManizales" />
                 <div className="instagram-hover">
                   <a href="https://umanizales.edu.co/" target="_blank">
                     <i className="fas fa-link" />
