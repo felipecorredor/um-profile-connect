@@ -14,7 +14,9 @@ const CourseDetails = async () => {
 
   return (
     <Layout currentUser={currentUser}>
-      <PageBanner pageName={"Crear Perfil"} />
+      <PageBanner
+        pageName={student ? "Actualizar Curriculum" : "Crear Curriculum"}
+      />
       <section className="course-details-area pt-130 rpt-100">
         <div className="container">
           <div className="row large-gap">
@@ -24,7 +26,7 @@ const CourseDetails = async () => {
                   <span className="category">Universidad de Manizales</span>
                   <Image src={imgLineShape} alt="Line" />
                 </div>
-                <h2>Crea tu perfil</h2>
+                <h2> {student ? "Actualiza tu perfil" : "Crea tu perfil"} </h2>
 
                 <section>
                   <h3>Información principal</h3>

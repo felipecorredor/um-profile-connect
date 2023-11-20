@@ -78,7 +78,7 @@ const CreateStudent = ({ student }) => {
 
             <div className="d-flex justify-content-center">
               <button type="submit" className="theme-btn">
-                {hasStudent ? "Actualizar perfil" : "Crear perfil"}{" "}
+                {hasStudent ? "Actualizar curriculum" : "Crear curriculum"}{" "}
                 <i className="fas fa-arrow-right" />
               </button>
             </div>
