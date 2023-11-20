@@ -1,3 +1,4 @@
+import Image from "next/image";
 import advertise1 from "/public/assets/images/advertise/1.png";
 
 const Advertise = () => {
@@ -13,7 +14,12 @@ const Advertise = () => {
             </p>
           </div>
           <div className="image">
-            <img src={advertise1.src} alt="Advertise" />
+            <Image
+              src={advertise1.src}
+              alt="Advertise"
+              height={150}
+              width={150}
+            />
           </div>
         </div>
       </div>

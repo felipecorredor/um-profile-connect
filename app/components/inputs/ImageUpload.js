@@ -2,6 +2,7 @@
 
 import { useCallback } from "react";
 import { CldUploadWidget } from "next-cloudinary";
+import Image from "next/image";
 
 const ImageUpload = ({ onChange, value }) => {
   const handleUpload = useCallback(
@@ -37,21 +38,21 @@ const ImageUpload = ({ onChange, value }) => {
             )}
 
             {value && (
-              <div className="image fadeInUp delay-0-3s img-item">
-                <img
+              <div
+                className="image fadeInUp delay-0-3s img-item"
+                style={{ cursor: "pointer" }}
+              >
+                <Image
                   alt="Upload"
-                  fill
-                  style={{
-                    objectFit: "contain",
-                    width: "100%",
-                    maxHeight: "500px",
-                  }}
+                  objectFit="contain"
+                  width={800}
+                  height={450}
                   src={value}
                 />
 
                 <div className="img-item-hover d-flex flex-column">
-                    <i className="fas fa-image" />
-                    <span>Cambiar foto</span>
+                  <i className="fas fa-image" />
+                  <span>Cambiar foto</span>
                 </div>
               </div>
             )}
