@@ -18,7 +18,7 @@ const Menus = ({ currentUser }) => (
 
     {currentUser && (
       <li>
-        <LinkRef href="/curriculum">Crear Curriculum</LinkRef>
+        <LinkRef href="/curriculum">Curriculum</LinkRef>
       </li>
     )}
   </ul>
