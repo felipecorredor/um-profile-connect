@@ -1,5 +1,6 @@
 import getStudents from "@/app/actions/getStudents";
 import StudentCard from "../students/list/studentCard";
+import Link from "next/link";
 
 const GET_NUMBER_ELEMENTS = 6;
 
@@ -25,6 +26,12 @@ const Index1Isotope = async () => {
               className="col-lg-4 col-md-6"
             />
           ))}
+        </div>
+
+        <div className="row justify-content-center">
+          <Link className="theme-btn" href="/students">
+            Vert todos los perfiles <i className="fas fa-arrow-right" />
+          </Link>
         </div>
       </div>
     </section>

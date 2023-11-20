@@ -4,9 +4,7 @@ import PageBanner from "../components/PageBanner";
 import Advertise from "../components/Advertise";
 import getCurrentUser from "../actions/getCurrentUser";
 import Image from "next/image";
-import imgAbout from "../../public/assets/images/about/about-page.png";
-import imgIcon7 from "../../public/assets/images/features/icon7.png";
-import imgIcon8 from "../../public/assets/images/features/icon8.png";
+import { imgAbout, imgIcon7, imgIcon8 } from "@/images";
 
 const About = async () => {
   const currentUser = await getCurrentUser();
