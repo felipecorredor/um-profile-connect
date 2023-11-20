@@ -37,9 +37,7 @@ const CreateStudent = ({ student }) => {
       return;
     }
 
-    hasStudent
-      ? updateStudent(data, student.id)
-      : createStudent(data, student.id);
+    hasStudent ? updateStudent(data) : createStudent(data);
   };
 
   const watchImageSrc = methods.watch("imageSrc");

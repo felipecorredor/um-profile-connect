@@ -8,40 +8,40 @@ const useStudent = (errors) => {
   const router = useRouter();
 
   const updateStudent = useCallback(
-    (data, studentId) => {
-      "studentId=6552575b78cf9b55f196ecad";
-      axios
-        .put("/api/students", data)
-        .then(() => {
-          toast.success("Perfil actualizado exitosamente");
-          router.push(`/student?studentId=${studentId}`);
-        })
-        .catch((error) => {
-          if (isNotEmptyObject(errors)) {
-            toast.error("Revisa los campos obligatorios");
-            return;
-          }
-          toast.error(error.message);
-        });
+    async (data) => {
+      try {
+        const response = await axios.put("/api/students", data);
+        const student = response.data.student;
+        router.refresh();
+        toast.success("Perfil actualizado exitosamente");
+        router.push(`/student?studentId=${student.id}`);
+      } catch (error) {
+        if (isNotEmptyObject(errors)) {
+          toast.error("Revisa los campos obligatorios");
+          return;
+        }
+        toast.error(error.message);
+      }
     },
     [router, errors]
   );
 
   const createStudent = useCallback(
-    (data, studentId) => {
-      axios
-        .post("/api/students", data)
-        .then(() => {
-          toast.success("Perfil creado exitosamente");
-          router.push(`/student?studentId=${studentId}`);
-        })
-        .catch((error) => {
-          if (isNotEmptyObject(errors)) {
-            toast.error("Revisa los campos obligatorios");
-            return;
-          }
-          toast.error(error.message);
-        });
+    async (data) => {
+      try {
+        const response = await axios.post("/api/students", data);
+        const student = response.data.student;
+
+        router.refresh();
+        toast.success("Perfil creado exitosamente");
+        router.push(`/student?studentId=${student.id}`);
+      } catch (error) {
+        if (isNotEmptyObject(errors)) {
+          toast.error("Revisa los campos obligatorios");
+          return;
+        }
+        toast.error(error.message);
+      }
     },
     [router, errors]
   );
