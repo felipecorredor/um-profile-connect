@@ -24,7 +24,7 @@ const InputText = ({
         className="form-control"
         placeholder={placeholder}
         {...register(name, {
-          required: "Campo obligatorio",
+          required: "Campo requerido",
           min: {
             value: min,
             message: "Debe ser mayor a 0",

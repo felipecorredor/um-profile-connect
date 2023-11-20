@@ -4,7 +4,11 @@ import { useFieldArray, useFormContext } from "react-hook-form";
 
 const SkillsForm = () => {
   const methods = useFormContext();
-  const { register, control } = methods;
+  const {
+    register,
+    control,
+    formState: { errors },
+  } = methods;
 
   const { fields, append, remove } = useFieldArray({
     control,
@@ -39,10 +43,15 @@ const SkillsForm = () => {
                   </label>
                   <Form.Control
                     type="text"
-                    {...register(`skills.${index}.name`)}
+                    {...register(`skills.${index}.name`, {
+                      required: "Campo requerido",
+                    })}
                     placeholder="Ej. React"
                     className="form-control"
                   />
+                  {errors.skills?.[index]?.name && (
+                    <span className="form-error">Campo requerido</span>
+                  )}
                 </Form.Group>
               </div>
 

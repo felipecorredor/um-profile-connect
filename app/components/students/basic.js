@@ -20,6 +20,9 @@ const BasicForm = () => {
           placeholder="Nombres completos"
           register={register}
         />
+        {errors?.firstName && (
+          <span className="form-error">{errors?.firstName?.message}</span>
+        )}
       </div>
       <div className="col-sm-6">
         <InputText
@@ -28,6 +31,9 @@ const BasicForm = () => {
           placeholder="Apellidos completos"
           register={register}
         />
+        {errors?.lastName && (
+          <span className="form-error">{errors?.lastName?.message}</span>
+        )}
       </div>
 
       <div className="col-sm-6">
@@ -37,6 +43,9 @@ const BasicForm = () => {
           placeholder="Correo electrónico"
           register={register}
         />
+        {errors?.email && (
+          <span className="form-error">{errors?.email?.message}</span>
+        )}
       </div>
 
       <div className="col-sm-6">
@@ -46,6 +55,9 @@ const BasicForm = () => {
           placeholder="Rol: ej. Frontend, Backend ..."
           register={register}
         />
+        {errors?.position && (
+          <span className="form-error">{errors?.position?.message}</span>
+        )}
       </div>
       <div className="col-sm-6">
         <InputText
@@ -58,6 +70,9 @@ const BasicForm = () => {
           register={register}
           errors={errors}
         />
+        {errors?.semester && (
+          <span className="form-error">{errors?.semester?.message}</span>
+        )}
       </div>
 
       <div className="col-sm-12">
@@ -71,8 +86,11 @@ const BasicForm = () => {
             className="form-control"
             rows={4}
             placeholder="Cuéntanos acerca de ti"
-            {...register("description")}
+            {...register("description", { required: "Campo requerido" })}
           />
+          {errors?.description && (
+            <span className="form-error">{errors?.description?.message}</span>
+          )}
         </div>
       </div>
     </Form.Row>

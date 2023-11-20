@@ -4,18 +4,19 @@ import { useRouter } from "next/navigation";
 import { useCallback } from "react";
 import toast from "react-hot-toast";
 
-const useStudent = errors => {
+const useStudent = (errors) => {
   const router = useRouter();
 
   const updateStudent = useCallback(
-    data => {
+    (data, studentId) => {
+      "studentId=6552575b78cf9b55f196ecad";
       axios
         .put("/api/students", data)
-        .then(async () => {
+        .then(() => {
           toast.success("Perfil actualizado exitosamente");
-          router.refresh();
+          router.push(`/student?studentId=${studentId}`);
         })
-        .catch(error => {
+        .catch((error) => {
           if (isNotEmptyObject(errors)) {
             toast.error("Revisa los campos obligatorios");
             return;
@@ -27,14 +28,14 @@ const useStudent = errors => {
   );
 
   const createStudent = useCallback(
-    data => {
+    (data, studentId) => {
       axios
         .post("/api/students", data)
-        .then(async () => {
+        .then(() => {
           toast.success("Perfil creado exitosamente");
-          router.refresh();
+          router.push(`/student?studentId=${studentId}`);
         })
-        .catch(error => {
+        .catch((error) => {
           if (isNotEmptyObject(errors)) {
             toast.error("Revisa los campos obligatorios");
             return;

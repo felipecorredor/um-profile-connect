@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styled from "styled-components";
 
 const Menus = ({ currentUser }) => (
   <ul className="navigation clearfix d-none d-lg-flex">
@@ -17,10 +18,14 @@ const Menus = ({ currentUser }) => (
 
     {currentUser && (
       <li>
-        <Link href="/curriculum">Crear perfil</Link>
+        <LinkRef href="/curriculum">Crear perfil</LinkRef>
       </li>
     )}
   </ul>
 );
 
 export default Menus;
+
+const LinkRef = styled(Link)`
+  color: #00cc83 !important;
+`;

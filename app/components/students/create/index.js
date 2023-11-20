@@ -13,7 +13,7 @@ import ImageUpload from "../../inputs/ImageUpload";
 import useStudent from "@/app/hooks/useStudent";
 
 const CreateStudent = ({ student }) => {
-  const hasStudent = useMemo(() => student, [student]);
+  const hasStudent = useMemo(() => student?.id, [student?.id]);
 
   const methods = useForm({
     defaultValues: student,
@@ -37,7 +37,9 @@ const CreateStudent = ({ student }) => {
       return;
     }
 
-    hasStudent ? updateStudent(data) : createStudent(data);
+    hasStudent
+      ? updateStudent(data, student.id)
+      : createStudent(data, student.id);
   };
 
   const watchImageSrc = methods.watch("imageSrc");

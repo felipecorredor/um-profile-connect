@@ -9,6 +9,8 @@ export async function GET(request) {
 
   const studentId = request.url.substring(request.url.lastIndexOf("/") + 1);
 
+  console.log("studentId::", studentId);
+
   const student = await prisma.student.findUnique({
     where: {
       id: studentId,
