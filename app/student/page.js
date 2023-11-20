@@ -2,7 +2,7 @@
 
 import PageBanner from "@/app/components/PageBanner";
 
-import { fetcher, formatDateTime } from "@/sources/utils";
+import { fetcher, formatDateTime, typeContract } from "@/sources/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -109,7 +109,8 @@ const StudentPage = () => {
                         <b>Ubicación:</b> {experience.location}
                       </p>
                       <p className="experience-type">
-                        <b>Tipo de empleo:</b> {experience.typeEmployment}
+                        <b>Tipo de empleo:</b>{" "}
+                        {typeContract[experience.typeEmployment]}
                       </p>
                       <p className="experience-description">
                         <b>Descripción:</b> {experience.description}

@@ -121,3 +121,11 @@ export const formatDateTime = (currentDate) => {
 
   return formattedDateTime;
 };
+
+export const typeContract = {
+  "full-time": "Jornada completa",
+  "part-time": "Jornada parcial",
+  autonomous: "Autónomo",
+  "temporary-contract": "Contrato temporal",
+  "practice-contract": "Contrato de practica",
+};
